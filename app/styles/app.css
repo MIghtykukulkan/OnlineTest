@@ -1,4 +1,20 @@
 .btn-register{
     background-color: dodgerblue;
-    border-color: dodgerblue;
+    display: inline-block;
+     padding: 6px 12px;
+}
+.btn-taketest{
+    background-color: dodgerblue;
+    display: inline-block;
+    padding: 6px 12px;
+}
+.btn-starttest{
+    background-color: dodgerblue;
+    display: inline-block;
+    padding: 6px 12px;  
+}
+.btn-checkscore{
+    background-color: dodgerblue;
+    display: inline-block;
+    padding: 6px 12px;      
 }
