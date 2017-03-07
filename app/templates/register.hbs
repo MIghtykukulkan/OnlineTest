@@ -4,39 +4,65 @@
             <h4>Register Here...!!!</h4>
         </div>
         <div class="col-md-6-btm">
+
+
             <div class="form-group">
                 <br>
                 <label class="col-sm-4">First Name</label>
-                {{input type="text" valueBinding="fname" class="col-sm-7" id="fname" placeholder="First Name"}}
-                <span class="errmsg">{{errorMessage}}</span>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </div>
+                    {{input type="text" valueBinding="fname" class="form-control" id="fname" placeholder="First Name"}}
+                </div>
+                <span class="errmsg">{{errorFNMessage}}</span>
                 <br>
             </div>
+
             <br>
+
             <div class="form-group">
                 <label class="col-sm-4">Last Name</label>
-                {{input type="text" class="col-sm-7" id="lname" placeholder="Last Name"}}
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </div>
+                    {{input type="text" valueBinding="lname" class="form-control" id="lname" placeholder="Last Name"}}
+                </div>
+                <span class="errmsg">{{errorLNMessage}}</span>
                 <br>
             </div>
-            <br>
+
+
             <div class="form-group">
                 <label class="col-sm-4">Phone</label>
-                {{input type="text" class="col-sm-7" id="phone" placeholder="Phone Number"}}
-                <span class="glyphicone glyphicon-earphone  form-control-feedback"></span>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-earphone"></span>
+                    </div>
+                    {{input type="text" valueBinding="phone" class="form-control" id="phone" placeholder="Phone Number"}}
+                </div>
+                <span class="errmsg">{{errorPNMessage}}</span>
                 <br>
             </div>
-            <br>
+
             <div class="form-group">
                 <label class="col-sm-4">Email</label>
-                {{input type="text" class="col-sm-7" id="email" placeholder="Email-Id"}}
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <div class="input-group">
+                    <div class="input-group-addon">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                    </div>
+                    {{input type="text" valueBinding="email" class="form-control" id="email" placeholder="Email-Id"}}
+                </div>
+                <span class="errmsg">{{errorEMMessage}}</span>
                 <br>
             </div>
             <br>
 
             <div class="btn-taketest">
                 <button type="button" class="btn btn-primary" {{action 'taketest'}}> Take Test</button>
-
             </div>
+
         </div>
 
     </div>

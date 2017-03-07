@@ -43,22 +43,7 @@
     left: 20px;
 
 }
-.glyphicon {
-    position: absolute;
-    top: 239px;
-    float: left;
-    left: 365px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-}
-.glyphicone{
-    position: absolute;
-    top: 185px;
-    float: left;
-    left: 365px;
-    display: inline-block;
-    font-family: 'Glyphicons Halflings';
-}
+
 .btn-calscore{
     background-color: dodgerblue;
     display: inline-block;
@@ -66,4 +51,7 @@
 }
 .form-group-test{
     text-align: center;
+}
+.errmsg{
+ color: red;
 }
