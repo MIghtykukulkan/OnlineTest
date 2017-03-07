@@ -1,7 +1,11 @@
 
+<h3> {{testtype}} </h3>
 
+<br>
 {{#each model as |item|}}
 
 {{question-comp Ques=item}}
-
+<br>
 {{/each}}
+
+<button type="submit" class="btn btn-default" {{action 'getScore'}}>Calculate Score</button>
