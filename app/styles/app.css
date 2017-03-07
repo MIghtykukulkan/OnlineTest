@@ -2,11 +2,21 @@
     background-color: dodgerblue;
     display: inline-block;
      padding: 6px 12px;
+     position: relative;
+     left: 470px;
+      top:130px;
+}
+.img-home{
+    position: relative;
+    top:120px;
+     left: 320px;
 }
 .btn-taketest{
     background-color: dodgerblue;
     display: inline-block;
     padding: 6px 12px;
+     position: relative;
+    left: 10px;
 }
 .btn-starttest{
     background-color: dodgerblue;
@@ -17,4 +27,52 @@
     background-color: dodgerblue;
     display: inline-block;
     padding: 6px 12px;      
+}
+.home-background{
+    background-color: lightgrey;
+    height: 1200px;
+    width: 1010px;
+   
+}
+.register-box{
+    width: 450px;
+    height: 258px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+     text-align: center;
+}
+.register-box-body{
+    color:black;
+    background:lightgray;
+    padding: 20px;
+    position: relative;
+    top: 50px;
+    left: 20px;
+
+}
+.glyphicon {
+    position: absolute;
+    top: 239px;
+    float: left;
+    left: 365px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+}
+.glyphicone{
+    position: absolute;
+    top: 185px;
+    float: left;
+    left: 365px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+}
+.btn-calscore{
+    background-color: dodgerblue;
+    display: inline-block;
+    padding: 6px 12px;  
+}
+.form-group-test{
+    text-align: center;
 }
