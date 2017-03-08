@@ -2,14 +2,16 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     actions: {
-        taketest: function() {
+
+            
+        registerUser: function() {
             var lastName = this.get('lname');
             var firstName = this.get('fname');
             var phoneNo = this.get('phone');
             var emailId = this.get('email');
             var phoneNo = document.getElementById('phone');
 
-
+           var datastring=this.get('model');
 
             var returnValue = true;
 
@@ -67,5 +69,10 @@ export default Ember.Controller.extend({
                 this.set('errorEIMessage', "Please enter coorect Email Id");
             }
         }
+     
+
+
+
+
     }
 });
