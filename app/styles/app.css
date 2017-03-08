@@ -45,13 +45,21 @@
 }
 
 .btn-calscore{
-    background-color: dodgerblue;
-    display: inline-block;
-    padding: 6px 12px;  
+  position: relative;
+     left: 470px;
+      top:100px;
 }
 .form-group-test{
     text-align: center;
 }
 .errmsg{
  color: red;
+}
+.align-q{
+    position: relative;
+   text-align: left;
+   left: 80px;
+}
+.test-head{
+    -webkit-text-fill-color: limegreen;
 }

@@ -32,16 +32,17 @@ export default Ember.Route.extend({
                 return data;
             }
             });
-                    
+                   
         
  console.log("selectedtest")
- */
+ */ 
         if (testtype==="JAVA")
         {
           var questionlist = []; 
             
           var Question = new Ember.Object();
-
+         
+        
           Question.description = "which of these is necessary condition for automatic type conversion in Java?";
           Question.id = "1";
           Question.option1 = "The destination type is smaller than source type";

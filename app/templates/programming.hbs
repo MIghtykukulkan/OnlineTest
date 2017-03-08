@@ -1,7 +1,10 @@
-<h3> {{testtype}} </h3>
-
+<div class="align-q">
+<div class="test-head">
+<h4>Please Start with Test</h4> {{testtype}}
+</div>
 <br> {{#each model as |item|}} {{question-comp Ques=item}}
 <br> {{/each}}
+</div>
 <div class="btn-calscore">
-<button type="submit" {{action 'getScore'}}>Calculate Score</button>
+<button type="button" class="btn btn-primary" {{action 'getScore'}}>Calculate Score</button>
 </div>
