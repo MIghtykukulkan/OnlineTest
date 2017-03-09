@@ -1,16 +1,13 @@
-
 <br>
 <div class="form-group-test">
-<h3>Thank you For Registration...!!!</h3>
-<div>
-    <br>
-{{select-component dropdowntype="test" listitem=testlist selecteditem=selectedtest}}
-<span class="errmsg">{{errorMessage}}</span>
+    <h3>Thank you For Registration...!!!</h3>
+    <div>
+        <br> {{select-component dropdowntype="test" listitem=testlist selecteditemlist=selectedtest}}
+        <span class="errmsg">{{errorMessage}}</span>
+    </div>
+    <br><br><br><br>
+
+    <button type="button" class="btn btn-primary" {{action 'questionlist'}}>Start Test</button>
+
+
 </div>
-<br><br><br><br>
-
-<button type="button" class="btn btn-primary" {{action 'questionlist'}}>Start Test</button>
-
-
-</div>
-

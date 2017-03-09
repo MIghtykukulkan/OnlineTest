@@ -2,16 +2,18 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     //try : Ember.inject.controller('test'),
-    testtype: Ember.computed.alias("try.selectedtest"),
+    //testtype: Ember.computed.alias("try.selectedtest"),
 
     model(){
         
-            var testtype = this.controllerFor('test').get('selectedtest')
+            var testtype = this.controllerFor('test').get('selectedtest');
+            this.controllerFor('programming').set('testType', testtype);
+                   this.controllerFor('test').set('selectedtest', null);
+            
            /* console.log(testtype);
             testtype = testtype.toLowerCase()
            // this.set('selectedtest',testtype);
            var data;
-
             $.ajax({
                     url: "http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:9090/questions/"+testtype,
                     type: 'GET',
@@ -194,5 +196,6 @@ export default Ember.Route.extend({
 
         return questionlist;
     }
+   
     }
 });
