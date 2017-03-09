@@ -21,8 +21,9 @@
 }
 .home-background{
     background-color: lightgrey;
-    height: 1200px;
-    width: 1010px;
+    position: fixed;
+    height: 1000px;
+    width: 1050px;
    
 }
 .register-box{
