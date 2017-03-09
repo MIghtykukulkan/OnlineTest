@@ -9,9 +9,9 @@ export default Ember.Controller.extend({
             var firstName = this.get('fname');
             var phoneNo = this.get('phone');
             var emailId = this.get('email');
-            var phoneNo = document.getElementById('phone');
+            //var phoneNo = document.getElementById('phone');
 
-           var datastring=this.get('model');
+           var dataString={"fname":firstName,"lname":lastName,"phone":phoneNo,"email":emailId}
 
             var returnValue = true;
 
@@ -31,7 +31,7 @@ export default Ember.Controller.extend({
 
                 returnValue = false;
             }
-            if (phoneNo.value.length < 10 || phoneNo.value.length > 10) {
+            if (phoneNo.length < 10 || phoneNo.length > 10) {
 
                 returnValue = false;
             }
@@ -58,8 +58,28 @@ export default Ember.Controller.extend({
                 this.set('errorEMMessage', "");
                 this.set('errorPHMessage', "");
                 this.set('errorEIMessage', "");
+                
+                console.log(JSON.stringify(dataString));
+                
+                $.ajax({
+                type : 'POST',
+                accepts: 'application/json',
+                url : 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8080/registerUser',
+                data : dataString,
+                dataType : "json",
+                success : function(response) {
+                    this.transitionToRoute('test');
+                alert(response)
+                },
+                failure : function(result)
+                {
+                    alert(result)
+                }
+                })  
 
-                this.transitionToRoute('test');
+
+                
+
             } else {
                 this.set('errorFNMessage', "Please enter First Name");
                 this.set('errorPNMessage', "Please enter Phone Number");
@@ -68,11 +88,9 @@ export default Ember.Controller.extend({
                 this.set('errorPHMessage', "Please enter 10 digit no.");
                 this.set('errorEIMessage', "Please enter coorect Email Id");
             }
-        }
-     
-
-
-
-
-    }
+                
+                      
+    
+}
+}
 });
