@@ -4,3 +4,7 @@
 .navbar{
     background-color: palegreen
 }
+
+@import "ember-bootstrap/bootstrap";
+@import "ember-modal-dialog/ember-modal-structure";
+@import "ember-modal-dialog/ember-modal-appearance";
