@@ -13,7 +13,6 @@ export default Ember.Route.extend({
             testtype = testtype.toLowerCase()
            // this.set('selectedtest',testtype);
            var data;
-
             $.ajax({
                     url: "http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:9090/questions/"+testtype,
                     type: 'GET',
