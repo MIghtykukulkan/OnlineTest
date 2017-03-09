@@ -2,12 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
     //try : Ember.inject.controller('test'),
-    testtype: Ember.computed.alias("try.selectedtest"),
+    //testtype: Ember.computed.alias("try.selectedtest"),
 
     model(){
         
             var testtype = this.controllerFor('test').get('selectedtest');
             this.controllerFor('programming').set('testType', testtype);
+                   this.controllerFor('test').set('selectedtest', null);
             
            /* console.log(testtype);
             testtype = testtype.toLowerCase()

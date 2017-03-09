@@ -11,9 +11,8 @@ export default Ember.Controller.extend({
                 return false;
             } else {
                 this.set('errorMessage', "");
-                this.set('selectedtest', null);
+                this.set('chosenTest', chosen);
                 this.transitionToRoute('programming');
-
             }
         }
     }
