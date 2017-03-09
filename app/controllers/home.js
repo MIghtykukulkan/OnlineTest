@@ -1,14 +1,14 @@
 import Ember from 'ember';
 
 
-export default Ember.Controller.extend(  {
+export default Ember.Controller.extend({
 
- 
+
     myname: "umashankar",
-    
+
 
     actions: {
-            register: function() {
+        register: function() {
             this.transitionToRoute('register');
         }
     }

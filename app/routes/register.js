@@ -2,27 +2,26 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-model()
-{
- var fname = this.get('fname');
- var lname = this.get('lname');
- var phone = this.get('phone');
- var email = this.get('email');
-},
+    model() {
+        var fname = this.get('fname');
+        var lname = this.get('lname');
+        var phone = this.get('phone');
+        var email = this.get('email');
+    },
 
- registerUser : function() {
+    registerUser: function() {
 
-                $.ajax({
-                type : 'POST',
-                url : 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8080/registerUser',
-                data : dataString,
-                dataType : "json",
-                success : function(data) {
-                 alert("yes")
-                }
-            });
- }
- /* createUser: function() {
+        $.ajax({
+            type: 'POST',
+            url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8080/registerUser',
+            data: dataString,
+            dataType: "json",
+            success: function(data) {
+                alert("yes")
+            }
+        });
+    }
+    /* createUser: function() {
  var fname = this.get('controller').get('fname');
  var lname = this.get('controller').get('lname');
  var phone = this.get('controller').get('phone');
@@ -44,4 +43,3 @@ model()
 }  
 */
 });
-

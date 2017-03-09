@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
     actions: {
 
-            
+
         registerUser: function() {
             var lastName = this.get('lname');
             var firstName = this.get('fname');
@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
             var emailId = this.get('email');
             var phoneNo = document.getElementById('phone');
 
-           var datastring=this.get('model');
+            var datastring = this.get('model');
 
             var returnValue = true;
 
@@ -69,7 +69,6 @@ export default Ember.Controller.extend({
                 this.set('errorEIMessage', "Please enter coorect Email Id");
             }
         }
-     
 
 
 

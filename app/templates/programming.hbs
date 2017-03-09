@@ -1,10 +1,13 @@
 <div class="align-q">
-<div class="test-head">
-<h4>Please Start with Test {{testtype}}</h4> 
-</div>
-<br> {{#each model as |item|}} {{question-comp Ques=item}}
-<br> {{/each}}
+    <div class="test-head">
+        <h4>Please Start with Test {{testtype}}</h4>
+    </div>
+    <!--<ul>-->
+    <br> {{#each model as |item|}} {{question-comp Ques=item}}
+    <!--<li>{{item.id}}</li>-->
+    <br> {{/each}}
+    <!--</ul>-->
 </div>
 <div class="btn-calscore">
-<button type="button" class="btn btn-primary" {{action 'getScore'}}>Calculate Score</button>
+    <button type="button" class="btn btn-primary" {{action 'getScore'}}>Calculate Score</button>
 </div>
