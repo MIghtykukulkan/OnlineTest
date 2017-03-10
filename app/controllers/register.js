@@ -97,15 +97,6 @@ export default Ember.Controller.extend({
                 this.set('errorEIMessage', "Please enter coorect Email Id");
             }
 
-
-
-
         }
-    }
-
-
-
-
-
-
+    },
 });
