@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+ 
     actions: {
 
 
@@ -68,7 +69,8 @@ export default Ember.Controller.extend({
                 this.set('errorPHMessage', "Please enter 10 digit no.");
                 this.set('errorEIMessage', "Please enter coorect Email Id");
             }
-        }
+        },
+        
 
 
 

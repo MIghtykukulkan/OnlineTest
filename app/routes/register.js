@@ -20,7 +20,10 @@ export default Ember.Route.extend({
                 alert("yes")
             }
         });
+        
     }
+     
+
     /* createUser: function() {
  var fname = this.get('controller').get('fname');
  var lname = this.get('controller').get('lname');
