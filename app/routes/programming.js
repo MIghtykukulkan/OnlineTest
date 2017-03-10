@@ -45,7 +45,7 @@ export default Ember.Route.extend({
           var Question = new Ember.Object();
          
         
-          Question.description = "which of these is necessary condition for automatic type conversion in Java?";
+          Question.description = "1. which of these is necessary condition for automatic type conversion in Java?";
           Question.id = "1";
           Question.option1 = "The destination type is smaller than source type";
           Question.option2 = "The destination type is larger than source type";
@@ -54,7 +54,7 @@ export default Ember.Route.extend({
           questionlist[0] = Question
 
           Question = new Ember.Object();
-          Question.description = "Which function is used to perform some action when object is to be destroyed?";
+          Question.description = "2. Which function is used to perform some action when object is to be destroyed?";
           Question.id = "2";
           Question.option1 = "finalize()";
           Question.option2 = "delete()";
@@ -63,7 +63,7 @@ export default Ember.Route.extend({
           questionlist[1] = Question
 
           Question = new Ember.Object();
-          Question.description = "Which keyword is used by method to refer to the object that invoked it?";
+          Question.description = "3. Which keyword is used by method to refer to the object that invoked it?";
           Question.id = "3";
           Question.option1 = "import";
           Question.option2 = "catch";
@@ -72,7 +72,7 @@ export default Ember.Route.extend({
           questionlist[2] = Question
 
           Question = new Ember.Object();
-          Question.description = "Which keyword is used to refer to member of base class from subclass?";
+          Question.description = "4. Which keyword is used to refer to member of base class from subclass?";
           Question.id = "4";
           Question.option1 = "upper";
           Question.option2 = "super";
@@ -82,7 +82,7 @@ export default Ember.Route.extend({
 
 
           Question = new Ember.Object();
-          Question.description = "Which of these access specifiers can be used for an interface?";
+          Question.description = "5. Which of these access specifiers can be used for an interface?";
           Question.id = "5";
           Question.option1 = "Public";
           Question.option2 = "Protected";
@@ -97,7 +97,7 @@ export default Ember.Route.extend({
          
             var Question = new Ember.Object();
 
-           Question.description = "what is standard output ?";
+           Question.description = "1. what is standard output ?";
            Question.id = "1";
            Question.option1 = "Monitor";
            Question.option2 = "Printer";
@@ -106,7 +106,7 @@ export default Ember.Route.extend({
            questionlist[0] = Question
 
            Question = new Ember.Object();
-           Question.description = "which one of the following is not a OOP language ?";
+           Question.description = "2. which one of the following is not a OOP language ?";
            Question.id = "2";
            Question.option1 = "C";
            Question.option2 = "Objective C";
@@ -115,7 +115,7 @@ export default Ember.Route.extend({
            questionlist[1] = Question
 
            Question = new Ember.Object();
-           Question.description = "which one of the following is an example of runtime Polymorphism ?";
+           Question.description = "3. which one of the following is an example of runtime Polymorphism ?";
            Question.id = "3";
            Question.option1 = "method overloading";
            Question.option2 = "method overriding";
@@ -125,7 +125,7 @@ export default Ember.Route.extend({
 
            
            Question = new Ember.Object();
-           Question.description = "which ia an encapsulation ?";
+           Question.description = "4. which ia an encapsulation ?";
            Question.id = "4";
            Question.option1 = "Hiding unnecessary information to outside world";
            Question.option2 = "Wrapping up properties and methods";
@@ -135,7 +135,7 @@ export default Ember.Route.extend({
 
 
            Question = new Ember.Object();
-           Question.description = "what is a recursive method ?";
+           Question.description = "5. what is a recursive method ?";
            Question.id = "5";
            Question.option1 = "A method that loops through a list";
            Question.option2 = "A method that calls itself";
@@ -150,7 +150,7 @@ export default Ember.Route.extend({
             
             var Question = new Ember.Object();
 
-           Question.description = "To be 'badgered' is to be ?";
+           Question.description = "1. To be 'badgered' is to be ?";
            Question.id = "1";
            Question.option1 = "flattered";
            Question.option2 = "tormented";
@@ -159,7 +159,7 @@ export default Ember.Route.extend({
            questionlist[0] = Question
 
            Question = new Ember.Object();
-           Question.description = "If you were 'inundated' with work,you would be ?";
+           Question.description = "2. If you were 'inundated' with work,you would be ?";
            Question.id = "2";
            Question.option1 = "very busy";
            Question.option2 = "not busy at all";
@@ -168,7 +168,7 @@ export default Ember.Route.extend({
            questionlist[1] = Question
 
            Question = new Ember.Object();
-           Question.description = "Identify the closest in meaning to indenture";
+           Question.description = "3. Identify the closest in meaning to indenture";
            Question.id = "3";
            Question.option1 = "Written contract";
            Question.option2 = "verbal promise";
@@ -177,7 +177,7 @@ export default Ember.Route.extend({
            questionlist[2] = Question
 
            Question = new Ember.Object();
-           Question.description = "If a person cannot be easily handled or dealt with,he will not be complimented for his";
+           Question.description = "4. If a person cannot be easily handled or dealt with,he will not be complimented for his";
            Question.id = "3";
            Question.option1 = "Domesticity";
            Question.option2 = "Knowledge";
@@ -186,7 +186,7 @@ export default Ember.Route.extend({
            questionlist[3] = Question
 
            Question = new Ember.Object();
-           Question.description = "uranium:fissionable::x:malleable,identity x";
+           Question.description = "5. uranium:fissionable::x:malleable,identity x";
            Question.id = "3";
            Question.option1 = "Diamond";
            Question.option2 = "Gold";
