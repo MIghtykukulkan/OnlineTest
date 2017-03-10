@@ -7,6 +7,9 @@ export default Ember.Controller.extend({
         toggleModal: function() {
             this.toggleProperty('isShowingModal');
             console.log("toggled");
+        },
+        toggleModalOk:function(){
+            this.transitionToRoute('home');
         }
     }
 });
