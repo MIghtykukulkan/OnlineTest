@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
 
-export default Ember.Controller.extend(  {
-  isShowingModal: false,
+export default Ember.Controller.extend({
+    isShowingModal: false,
     actions: {
-            toggleModal: function() {
-              this.toggleProperty('isShowingModal');
+        toggleModal: function() {
+            this.toggleProperty('isShowingModal');
+            console.log("toggled");
         }
     }
 });

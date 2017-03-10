@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
+
+ /* createUser: function() {
+
     model() {
         var fname = this.get('fname');
         var lname = this.get('lname');
@@ -25,6 +28,7 @@ export default Ember.Route.extend({
      
 
     /* createUser: function() {
+
  var fname = this.get('controller').get('fname');
  var lname = this.get('controller').get('lname');
  var phone = this.get('controller').get('phone');
