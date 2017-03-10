@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
- 
     actions: {
 
 
@@ -98,7 +97,6 @@ export default Ember.Controller.extend({
                 this.set('errorEIMessage', "Please enter coorect Email Id");
             }
 
-        },
-        
-    }
+        }
+    },
 });

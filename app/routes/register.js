@@ -2,7 +2,15 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-
+ model(){
+     var fname = this.get('fname');
+     this.controllerFor('register').set('fname', null);
+      var fname = this.get('lname');
+     this.controllerFor('register').set('lname', null);
+      var fname = this.get('phone');
+     this.controllerFor('register').set('phone', null);
+      var fname = this.get('email');
+     this.controllerFor('register').set('email', null);
  /* createUser: function() {
 
     model() {
@@ -49,4 +57,6 @@ export default Ember.Route.extend({
 }
 }  
 */
+ }
+
 });
