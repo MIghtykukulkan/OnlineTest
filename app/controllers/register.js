@@ -73,7 +73,7 @@ export default Ember.Controller.extend({
                 $.ajax({
                     type: 'POST',
                     accepts: 'application/json',
-                    url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8080/registerUser',
+                    url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8082/registerUser',
                     data: dataString,
                     dataType: "json",
                     success: function(response) {
@@ -89,12 +89,12 @@ export default Ember.Controller.extend({
 
 
             } else {
-                this.set('errorFNMessage', "Please enter First Name");
-                this.set('errorPNMessage', "Please enter Phone Number");
-                this.set('errorLNMessage', "Please enter Last Name");
-                this.set('errorEMMessage', "Please enter Email Id");
-                this.set('errorPHMessage', "Please enter 10 digit no.");
-                this.set('errorEIMessage', "Please enter coorect Email Id");
+                this.set('errorFNMessage', "Please Enter First Name");
+                this.set('errorPNMessage', "Please Enter Phone Number");
+                this.set('errorLNMessage', "Please Enter Last Name");
+                this.set('errorEMMessage', "Please Enter Email Id");
+                this.set('errorPHMessage', "Please Enter 10 digit no.");
+                this.set('errorEIMessage', "Please Enter Correct Email Id");
             }
 
         }
