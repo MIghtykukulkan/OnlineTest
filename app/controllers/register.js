@@ -72,8 +72,8 @@ export default Ember.Controller.extend({
 
                 $.ajax({
                     type: 'POST',
-                    accepts: 'application/json',
-                    url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8080/registerUser',
+                    contentType: 'application/json',
+                    url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8082/registerUser',
                     data: dataString,
                     dataType: "json",
                     success: function(response) {
