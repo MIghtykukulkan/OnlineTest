@@ -19,7 +19,7 @@ export default Ember.Route.extend({
                     type: 'GET',
                     accepts: 'application/json',
                     success: function(data) {
-                        alert("success"+JSON.Stringify(data))
+                        alert("success"+JSON.stringify(data))
                         console.log(data)                     
                         return data,
                       
