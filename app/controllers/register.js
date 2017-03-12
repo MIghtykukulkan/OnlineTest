@@ -1,87 +1,72 @@
 import Ember from 'ember';
+import {
+    validator,
+    buildValidations
+} from 'ember-cp-validations';
 
-export default Ember.Controller.extend({
+var Validations = buildValidations({
+    firstname: [
+        validator('presence', true),
+        validator('format', {
+            regex: /^[A-Za-z]+$/
+        })
+    ],
+
+    lastname: [
+        validator('presence', true),
+        validator('format', {
+            regex: /^[A-Za-z]+$/
+        })
+    ],
+
+    phonenumber: [
+        validator('presence', true),
+        validator('format', {
+            type: 'phone',
+            min: 10,
+            max: 10
+        })
+    ],
+
+    email: [
+        validator('presence', true),
+        validator('format', {
+            type: 'email'
+        })
+    ]
+});
+
+export default Ember.Controller.extend(Validations, {
     actions: {
         registerUser: function() {
-            var lastName = this.get('lname');
-            var firstName = this.get('fname');
-            var phoneNo = this.get('phone');
-            var emailId = this.get('email');
-            //var phoneNo = document.getElementById('phone');
-            // var datastring = this.get('model');
-            var returnValue = true;
+            let {
+                firstname,
+                lastname,
+                phonenumber,
+                email
+            } = this.getProperties('firstname', 'lastname', 'phonenumber', 'email');
 
-            //console.log("FirstName: " + firstName);
-            if (firstName === undefined || firstName === null) {
-                returnValue = false;
-            }
+            var dataString = {
+                "fname": firstname,
+                "lname": lastname,
+                "phone": phonenumber,
+                "email": email
+            };
+            //console.log(JSON.stringify(dataString));
 
-            //console.log("LastName: " + lastName);
-            if (lastName === undefined || lastName === null) {
-                returnValue = false;
-            }
-
-            //console.log("Phone: " + phoneNo);
-            if (phoneNo === undefined || phoneNo === null) {
-                returnValue = false;
-            }
-
-            if (phoneNo.length < 10 || phoneNo.length > 10) {
-                returnValue = false;
-            }
-
-            //console.log("email: " + emailId);
-            if (emailId === undefined || emailId === null) {
-                returnValue = false;
-            }
-
-            if (email.value.indexOf("@", 0) < 0) {
-                email.focus();
-                returnValue = false;
-            }
-
-            if (email.value.indexOf(".", 0) < 0) {
-                email.focus();
-                returnValue = false;
-            }
-
-            if (returnValue === true) {
-                this.set('errorFNMessage', "");
-                this.set('errorLNMessage', "");
-                this.set('errorPNMessage', "");
-                this.set('errorEMMessage', "");
-                this.set('errorPHMessage', "");
-                this.set('errorEIMessage', "");
-
-                var dataString = {
-                    "fname": firstName,
-                    "lname": lastName,
-                    "phone": phoneNo,
-                    "email": emailId
+            $.ajax({
+                type: 'POST',
+                contentType: 'application/json',
+                url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8082/registerUser',
+                data: dataString,
+                dataType: "json",
+                success: function(response) {
+                    this.transitionToRoute('test');
+                },
+                failure: function(result) {
+                    alert(result);
                 }
-                console.log(JSON.stringify(dataString));
-
-                $.ajax({
-                    type: 'POST',
-                    contentType: 'application/json',
-                    url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8082/registerUser',
-                    data: dataString,
-                    dataType: "json",
-                    success: function(response) {
-                        this.transitionToRoute('test');
-                    },
-                    failure: function(result) {
-                        alert(result)
-                    }
-                })
-            } else {
-                this.set('errorFNMessage', "Please enter First Name");
-                this.set('errorPNMessage', "Please enter Phone Number");
-                this.set('errorLNMessage', "Please enter Last Name");
-                this.set('errorEMMessage', "Please enter Email Id");
-                this.set('errorPHMessage', "Please enter 10 digit no.");
-                this.set('errorEIMessage', "Please enter coorect Email Id");
-            }
+            });
         }
-    },
+    }
 });
