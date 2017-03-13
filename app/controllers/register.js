@@ -37,6 +37,7 @@ var Validations = buildValidations({
 });
 
 export default Ember.Controller.extend(Validations, {
+    isShowingModal: false,
     actions: {
         registerUser: function() {
             let {
@@ -53,17 +54,22 @@ export default Ember.Controller.extend(Validations, {
                 "email": email
             };
             //console.log(JSON.stringify(dataString));
-
-            $.ajax({
+            this.toggleProperty('isShowingModal');
+            this.set('loading_image_visibility', "show");
+            Ember.$.ajax({
                 type: 'POST',
                 contentType: 'application/json',
                 url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8082/registerUser',
                 data: dataString,
                 dataType: "json",
                 success: function(response) {
+                    this.toggleProperty('isShowingModal');
+                    this.set('loading_image_visibility', "hide");
                     this.transitionToRoute('test');
                 },
                 failure: function(result) {
+                    this.toggleProperty('isShowingModal');
+                    this.set('loading_image_visibility', "hide");
                     alert(result);
                 }
             });
