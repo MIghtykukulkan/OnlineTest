@@ -3,13 +3,18 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     isShowingModal: false,
+   
     actions: {
         
         toggleModal: function() {
             this.toggleProperty('isShowingModal');
             console.log("toggled");
             console.log(JSON.stringify(dataStringsc));
+           
+            alert(this.get('uid'));
 
+            this.toggleProperty('isShowingModal');
+          
            // var a = 1+2;
            // console.log(a);
 
