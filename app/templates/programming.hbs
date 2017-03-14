@@ -8,6 +8,12 @@
         <br> {{/each}}
     </div>
 
+        {{#each model as |item|}} 
+                {{item.id}}<br>
+                {{item.ans}}
+        <br> {{/each}}
+
+
     <div class="btn-calscore">
 
         <button type="button" class="btn btn-primary" {{action "toggleModal"}}>Calculate Score</button>
