@@ -1,5 +1,5 @@
 import Ember from 'ember';
-
+import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
     isShowingModal: false,
@@ -8,42 +8,41 @@ export default Ember.Controller.extend({
         toggleModal: function() {
             this.toggleProperty('isShowingModal');
             console.log("toggled");
-            console.log(JSON.stringify(dataStringsc));
+           
         
             var uid = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
         
-            var model = this.get(model.message);
+            var model = this.get('model');
+            model = model.message;
             var datalist = [];
             for(var i=0; i< model.length; i++){
 
           var dataStringsc ={
-                    "uid": uid,
-                    "q_type": item.id,
-                    "score": item.userans
+                    "uid": 24,
+                    "q_type": model[i].id,
+                    "score": model[i].userAnswer
+                     
                 }
-
-                datalist[0] = dataStringsc;
-                datalist[1] = dataStringsc;
-                datalist[2] = dataStringsc;
-                datalist[3] = dataStringsc;
-                datalist[4] = dataStringsc;
-
+        
+                datalist[i] = dataStringsc;
+             
             }
-              
+
+            var mycontroller = this;
+              console.log(JSON.stringify(datalist))
                 $.ajax({
                     type: 'POST',
                     accepts: 'application/json',
-                    url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8082/userAnswer',
-                    data: datalist,
-                    dataType: "json",
+                    url: CONFIG.GOURL+'/userAnswer',
+                    data: JSON.stringify(datalist),
                     success: function(response) {
-                        this.transitionToRoute('programming');
-                        alert(response)
+                        mycontroller.set("score",response.score)
+                        console.log(response)
                     },
-                    failure: function(result) {
-                        alert(result)
+                    error: function(result) {
+                         console.log(result)
                     }
                 })
 

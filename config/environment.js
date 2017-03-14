@@ -22,13 +22,14 @@ module.exports = function(environment) {
       // when it is created
     }
   };
-
+ 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+       ENV.GOURL='http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8081';
   }
 
   if (environment === 'test') {

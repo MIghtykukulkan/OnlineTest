@@ -1,4 +1,7 @@
 import Ember from 'ember';
+
+import CONFIG from 'online-test/config/environment';
+
 import {
     validator,
     buildValidations
@@ -53,26 +56,25 @@ export default Ember.Controller.extend(Validations, {
                 "phone": phonenumber,
                 "email": email
             };
-            //console.log(JSON.stringify(dataString));
+            console.log(CONFIG.GOURL);
             this.toggleProperty('isShowingModal');
             this.set('loading_image_visibility', "show");
-            Ember.$.ajax({
-                type: 'POST',
-                contentType: 'application/json',
-                url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8082/registerUser',
-                data: dataString,
-                dataType: "json",
-                success: function(response) {
-                    this.toggleProperty('isShowingModal');
-                    this.set('loading_image_visibility', "hide");
-                    this.transitionToRoute('test');
-                },
-                failure: function(result) {
-                    this.toggleProperty('isShowingModal');
-                    this.set('loading_image_visibility', "hide");
-                    alert(result);
-                }
-            });
+            var myroute = this;
+           
+            $.ajax({
+            url: CONFIG.GOURL+'/registerUser',
+            type: 'POST',
+            accepts: 'application/json',
+            data: JSON.stringify(dataString),
+            success: function(dataString) {
+                   myroute.toggleProperty('isShowingModal');
+                   myroute.set('loading_image_visibility', "hide");
+                   myroute.transitionToRoute('test');
+            },
+            error: function() {
+                   console.log('DEBUG: GET Enquiries Failed');
+            }
+           });
         }
     }
 });
