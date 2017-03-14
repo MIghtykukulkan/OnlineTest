@@ -1,6 +1,9 @@
-<label>{{Ques.description}}</label>
-<br> {{#radio-button radioClass = "radioClass" value = Ques.option1 name = Ques.id}} {{Ques.option1}} {{/radio-button}}
-<br> {{#radio-button radioClass = "radioClass" value = Ques.option2 name = Ques.id}} {{Ques.option2}} {{/radio-button}}
-<br> {{#radio-button radioClass = "radioClass" value = Ques.option3 name = Ques.id}} {{Ques.option3}} {{/radio-button}}
-<br> {{#radio-button radioClass = "radioClass" value = Ques.option4 name = Ques.id}} {{Ques.option4}} {{/radio-button}}
+<label>{{Ques.question}}</label>
+
+{{#each Ques.choices as |item|}}
+        <br> {{#radio-button radioClass = "radioClass" value = item name = Ques.id groupValue=Ques.userAnswer}} {{item}} {{/radio-button}}
+{{/each}}
+
 <br>
+
+selected value is : {{Ques.userAnswer}}
