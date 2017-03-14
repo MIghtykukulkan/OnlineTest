@@ -9,26 +9,34 @@ export default Ember.Controller.extend({
             this.toggleProperty('isShowingModal');
             console.log("toggled");
             console.log(JSON.stringify(dataStringsc));
-
-           // var a = 1+2;
-           // console.log(a);
-
+        
             var uid = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
-            
-            var dataStringsc ={
-                "uid": uid,
-                "q_type": q_type,
-                "score": score
+        
+            var model = this.get(model.message);
+            var datalist = [];
+            for(var i=0; i< model.length; i++){
+
+          var dataStringsc ={
+                    "uid": uid,
+                    "q_type": item.id,
+                    "score": item.userans
+                }
+
+                datalist[0] = dataStringsc;
+                datalist[1] = dataStringsc;
+                datalist[2] = dataStringsc;
+                datalist[3] = dataStringsc;
+                datalist[4] = dataStringsc;
+
             }
-             
               
                 $.ajax({
                     type: 'POST',
                     accepts: 'application/json',
                     url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8082/userAnswer',
-                    data: dataStringsc,
+                    data: datalist,
                     dataType: "json",
                     success: function(response) {
                         this.transitionToRoute('programming');
@@ -73,7 +81,7 @@ export default Ember.Controller.extend({
                     failure: function(result) {
                         alert(result)
                     }
-                })       
+                })     
 
                 }
     }
