@@ -10,6 +10,9 @@ export default Ember.Controller.extend({
             console.log("toggled");
             console.log(JSON.stringify(dataStringsc));
 
+           // var a = 1+2;
+           // console.log(a);
+
             var uid = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');

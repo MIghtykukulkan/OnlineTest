@@ -10,7 +10,7 @@ export default Ember.Route.extend({
             this.controllerFor('programming').set('testType', testtype);
                    this.controllerFor('test').set('selectedtest', null);
             
-            console.log(testtype);
+           /* console.log(testtype);
             testtype = testtype.toLowerCase()
             this.set('selectedtest',testtype);
            var data;
@@ -34,11 +34,13 @@ export default Ember.Route.extend({
                 return data;
             }
             });
+
+            */
                    
         
- //console.log("selectedtest")
+ console.log("selectedtest")
   
-       /* if (testtype==="JAVA")
+        if (testtype==="JAVA")
         {
           var questionlist = []; 
             
@@ -198,4 +200,4 @@ export default Ember.Route.extend({
     }
    
     }
-});*/
+});
