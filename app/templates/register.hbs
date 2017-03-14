@@ -1,71 +1,58 @@
 <div class="register-box">
-    <div class="register-box-body">
-        <div class="col-md-6-header">
-            <h4>Register Here...!!!</h4>
-        </div>
-        <div class="col-md-6-btm">
-
-
-            <div class="form-group">
-                <br>
-                <label class="col-sm-4">First Name</label>
-                <div class="input-group">
-                    <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-user"></span>
-                    </div>
-                    {{input type="text" valueBinding="fname" class="form-control" id="fname" placeholder="First Name" }}
-                </div>
-                <span class="errmsg">{{errorFNMessage}}</span>
-                <br>
-            </div>
-
+   <div class="register-box-body">
+      <div class="col-md-6-header">
+         <h4>Register Here...!!!</h4>
+      </div>
+      <div class="col-md-6-btm">
+         <div class="form-group">
             <br>
-
-            <div class="form-group">
-                <label class="col-sm-4">Last Name</label>
-                <div class="input-group">
-                    <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-user"></span>
-                    </div>
-                    {{input type="text" valueBinding="lname" class="form-control" id="lname" placeholder="Last Name"}}
-                </div>
-                <span class="errmsg">{{errorLNMessage}}</span>
-                <br>
-            </div>
-
-
-            <div class="form-group">
-                <label class="col-sm-4">Phone</label>
-                <div class="input-group">
-                    <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-earphone"></span>
-                    </div>
-                    {{input type="text" valueBinding="phone" class="form-control" id="phone" placeholder="Phone Number"}}
-                </div>
-                <span class="errmsg">{{errorPNMessage}}</span>
-                <span class="errmsg">{{errorPHMessage}}</span>
-                <br>
-            </div>
-
-            <div class="form-group">
-                <label class="col-sm-4">Email</label>
-                <div class="input-group">
-                    <div class="input-group-addon">
-                        <span class="glyphicon glyphicon-envelope"></span>
-                    </div>
-                    {{input type="text" valueBinding="email" class="form-control" id="email" placeholder="Email-Id"}}
-                </div>
-                <span class="errmsg">{{errorEMMessage}}</span>
-                <span class="errmsg">{{errorEIMessage}}</span>
-                <br>
+            <label class="col-sm-4">First Name</label>
+            <div class="input-group">
+               <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-user"></span>
+               </div>
+               {{validated-input type="text" model=this valuePath='firstname' placeholder='First Name'}}
             </div>
             <br>
-
-            <div class="btn-taketest">
-                <button type="button" class="btn btn-primary" {{action 'registerUser'}}> Take Test</button>
+         </div>
+         <div class="form-group">
+            <label class="col-sm-4">Last Name</label>
+            <div class="input-group">
+               <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-user"></span>
+               </div>
+               {{validated-input type="text" model=this valuePath='lastname' placeholder='Last Name'}}
             </div>
-
-        </div>
-
-    </div>
+            <br>
+         </div>
+         <div class="form-group">
+            <label class="col-sm-4">Phone</label>
+            <div class="input-group">
+               <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-earphone"></span>
+               </div>
+               {{validated-input type="number" model=this valuePath='phonenumber' placeholder='Phone Number'}}
+            </div>
+            <br>
+         </div>
+         <div class="form-group">
+            <label class="col-sm-4">Email</label>
+            <div class="input-group">
+               <div class="input-group-addon">
+                  <span class="glyphicon glyphicon-envelope"></span>
+               </div>
+               {{validated-input type="text" model=this valuePath='email' placeholder='Email'}}
+            </div>
+            <br>
+         </div>
+         <div class="btn-taketest">
+            <button type="button" class="btn btn-primary" {{action 'registerUser'}} disabled= {{v-get this 'isInvalid'}}> Take Test</button>
+         </div>
+      </div>
+   </div>
 </div>
+{{#if isShowingModal}} 
+    {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
+        {{partial "loading-image"}}
+    {{/modal-dialog}}
+{{/if}}
