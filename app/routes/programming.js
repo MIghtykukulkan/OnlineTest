@@ -5,7 +5,11 @@ export default Ember.Route.extend({
     //testtype: Ember.computed.alias("try.selectedtest"),
 
     model(){
-        
+
+            
+            var message = this.controllerFor('register').get('uid');
+            alert(message);
+            this.controllerFor('programming').set('uid', message);
             var testtype = this.controllerFor('test').get('selectedtest');
             this.controllerFor('programming').set('testType', testtype);
                    this.controllerFor('test').set('selectedtest', null);

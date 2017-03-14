@@ -59,19 +59,23 @@ export default Ember.Controller.extend(Validations, {
             console.log(CONFIG.GOURL);
             this.toggleProperty('isShowingModal');
             this.set('loading_image_visibility', "show");
-            var myroute = this;
-           
-            $.ajax({
+            var mycontroller = this;
+            var uid;
+           return $.ajax({
             url: CONFIG.GOURL+'/registerUser',
             type: 'POST',
             accepts: 'application/json',
             data: JSON.stringify(dataString),
-            success: function(dataString) {
-                   myroute.toggleProperty('isShowingModal');
-                   myroute.set('loading_image_visibility', "hide");
-                   myroute.transitionToRoute('test');
+            success: function(response) {
+                   console.log(JSON.stringify(response));
+                   uid = response.message;
+                   mycontroller.set('uid',uid);
+                   mycontroller.toggleProperty('isShowingModal');
+                   mycontroller.set('loading_image_visibility', "hide");
+                   mycontroller.transitionToRoute('test');              
+                  
             },
-            error: function() {
+            error: function(result) {
                    console.log('DEBUG: GET Enquiries Failed');
             }
            });

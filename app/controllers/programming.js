@@ -3,13 +3,26 @@ import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
     isShowingModal: false,
+   
     actions: {
         
         toggleModal: function() {
             this.toggleProperty('isShowingModal');
             console.log("toggled");
+
            
         
+
+            console.log(JSON.stringify(dataStringsc));
+           
+            alert(this.get('uid'));
+
+            this.toggleProperty('isShowingModal');
+          
+           // var a = 1+2;
+           // console.log(a);
+
+
             var uid = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
