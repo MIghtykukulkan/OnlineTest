@@ -17,7 +17,7 @@ export default Ember.Controller.extend({
            
             alert(this.get('uid'));
 
-            this.toggleProperty('isShowingModal');
+           // this.toggleProperty('isShowingModal');
           
            // var a = 1+2;
            // console.log(a);
