@@ -1,11 +1,15 @@
 import Ember from 'ember';
-
+import CONFIG from 'online-test/config/environment';
 export default Ember.Route.extend({
     //try : Ember.inject.controller('test'),
     //testtype: Ember.computed.alias("try.selectedtest"),
 
     model(){
-        
+
+            
+            var message = this.controllerFor('register').get('uid');
+            alert(message);
+            this.controllerFor('programming').set('uid', message);
             var testtype = this.controllerFor('test').get('selectedtest');
             this.controllerFor('programming').set('testType', testtype);
                    this.controllerFor('test').set('selectedtest', null);
@@ -15,14 +19,14 @@ export default Ember.Route.extend({
             this.set('selectedtest',testtype);
            var data;
            return $.ajax({
-                    url: "http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8081/questions?testtype="+testtype,
+                    url: CONFIG.GOURL+'/questions?testtype='+testtype,
                     type: 'GET',
                     accepts: 'application/json',
                     success: function(data) {
                         //alert("success"+JSON.stringify(data))
                         console.log(JSON.stringify(data))                     
                         return data,
-                      
+                        
                         console.log('DEBUG: GET Enquiries OK');
                     },
                     error: function(err) {
