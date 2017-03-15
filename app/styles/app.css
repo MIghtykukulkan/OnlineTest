@@ -313,6 +313,12 @@ body.centered-modal-showing {
     top: -30px;
     left: 30px;
 }
+.Qbackground{
+     background-color:lightgoldenrodyellow;
+     position: relative;
+     width: 1000px;
+     height: 700px;
+}
 .score{
       -webkit-text-fill-color: green;
       text-align: center;
