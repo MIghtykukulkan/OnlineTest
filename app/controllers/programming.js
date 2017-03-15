@@ -5,13 +5,10 @@ export default Ember.Controller.extend({
     isShowingModal: false,
    
     actions: {
-        
+         
         toggleModal: function() {
             this.toggleProperty('isShowingModal');
             console.log("toggled");
-
-           
-        
 
             console.log(JSON.stringify(dataStringsc));
            
@@ -19,10 +16,6 @@ export default Ember.Controller.extend({
 
            // this.toggleProperty('isShowingModal');
           
-           // var a = 1+2;
-           // console.log(a);
-
-
             var message = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
@@ -135,6 +128,8 @@ export default Ember.Controller.extend({
                 })     
 
                 }
-    }
+    },
+  
+
 
 });
