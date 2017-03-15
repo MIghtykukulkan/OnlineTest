@@ -23,6 +23,7 @@ Router.map(function() {
   this.route('java');
   this.route('programming');
   this.route('test');
+  this.route('report');
   this.route('addquestion');
 });
 

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-
+import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
     isShowingModal: false,
@@ -9,6 +9,10 @@ export default Ember.Controller.extend({
         toggleModal: function() {
             this.toggleProperty('isShowingModal');
             console.log("toggled");
+
+           
+        
+
             console.log(JSON.stringify(dataStringsc));
            
             alert(this.get('uid'));
@@ -18,29 +22,40 @@ export default Ember.Controller.extend({
            // var a = 1+2;
            // console.log(a);
 
+
             var uid = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
-            
-            var dataStringsc ={
-                "uid": uid,
-                "q_type": q_type,
-                "score": score
-            }
+        
+            var model = this.get('model');
+            model = model.message;
+            var datalist = [];
+            for(var i=0; i< model.length; i++){
+
+          var dataStringsc ={
+                    "uid": 24,
+                    "q_type": model[i].id,
+                    "score": model[i].userAnswer
+                     
+                }
+        
+                datalist[i] = dataStringsc;
              
-              
+            }
+
+            var mycontroller = this;
+              console.log(JSON.stringify(datalist))
                 $.ajax({
                     type: 'POST',
                     accepts: 'application/json',
-                    url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8082/userAnswer',
-                    data: dataStringsc,
-                    dataType: "json",
+                    url: CONFIG.GOURL+'/userAnswer',
+                    data: JSON.stringify(datalist),
                     success: function(response) {
-                        this.transitionToRoute('programming');
-                        alert(response)
+                        mycontroller.set("score",response.score)
+                        console.log(response)
                     },
-                    failure: function(result) {
-                        alert(result)
+                    error: function(result) {
+                         console.log(result)
                     }
                 })
 
@@ -78,7 +93,7 @@ export default Ember.Controller.extend({
                     failure: function(result) {
                         alert(result)
                     }
-                })       
+                })     
 
                 }
     }
