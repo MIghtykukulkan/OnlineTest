@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('adminhome');
   this.route('faq');
   this.route('register');
+  this.route('report');
   this.route('challenge', function() {
     this.route('ch001');
     this.route('ch002');
@@ -23,7 +24,6 @@ Router.map(function() {
   this.route('java');
   this.route('programming');
   this.route('test');
-  this.route('report');
   this.route('addquestion');
 });
 

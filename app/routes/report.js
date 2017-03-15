@@ -4,12 +4,15 @@ export default Ember.Route.extend({
 
     model(){
        
-      
-       var  data = [{"id":"1","Fname":"Sweta","Java":"20",language:"8","fundament":"4"},
-       {"id":"2","Fname":"uma","Java":"20",language:"8","fundament":"4"},
-       {"id":"3","Fname":"Rakesh","Java":"20",language:"8","fundament":"4"}
+      //var data = [{"uid":uid,"fname":fname,"java":javascore,"language":languagescore,"fundamental":fundamentalscore}];
+
+       var  data = [{"uid":"1","fname":"Sweta","java":"20",language:"8","fundamental":"4"},
+       {"uid":"2","fname":"uma","java":"20",language:"8","fundamental":"4"},
+       {"uid":"3","fname":"Rakesh","java":"20",language:"8","fundamental":"4"}
        ];
         return data;
     }
+
+    
 
 });
