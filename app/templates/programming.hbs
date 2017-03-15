@@ -1,3 +1,5 @@
+
+
 <div>
     <div class="align-q">
         <div class="test-head">
@@ -21,7 +23,10 @@
     {{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
     <div>
         congratulations..!!
-        <br> Your Score Is {{score}}
+        <br> Your Score Is <br>
+        <div class="score">
+        {{score}}/25
+        </div>
         <br>
         <button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>
     </div>

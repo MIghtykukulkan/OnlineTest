@@ -1,13 +1,13 @@
 .btn-reg {
     position: relative;
     left: 470px;
-    top: 130px;
+    top: 70px;
 }
 
 .img-home {
     position: relative;
-    top: 120px;
-    left: 320px;
+    top: 80px;
+    
 }
 
 .btn-taketest {
@@ -23,7 +23,7 @@
 }
 
 .home-background {
-    background-color: lightgrey;
+    background-color:lightgoldenrodyellow;
     position: fixed;
     height: 1000px;
     width: 1050px;
@@ -307,10 +307,20 @@ body.centered-modal-showing {
     box-shadow: 0 4px 25px 4px rgba(0, 0, 0, .3)
 }
 
-
 .testlist{
     
-     position: relative;
+    position: relative;
     top: -30px;
-    left: 30px;
+    left: 17px;
+}
+.Qbackground{
+     background-color:lightgoldenrodyellow;
+     position: relative;
+     width: 1000px;
+     height: 650px;
+}
+.score{
+      -webkit-text-fill-color: green;
+      text-align: center;
+      font-size: large;
 }
