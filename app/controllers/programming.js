@@ -33,9 +33,9 @@ export default Ember.Controller.extend({
             for(var i=0; i< model.length; i++){
 
           var dataStringsc ={
-                    "uid": model.message,
+                    "uid": message,
                     "q_type": model[i].id,
-                    "score": model[i].userAnswer
+                    "selected": model[i].userAnswer
                      
                 }
         
@@ -56,8 +56,10 @@ export default Ember.Controller.extend({
                     },
                     error: function(result) {
                          console.log(result)
-                    }
+                    },
+                    
                 })
+                
 
         },
         toggleModalOk:function(){
