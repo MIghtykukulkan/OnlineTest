@@ -1,3 +1,4 @@
+<div class ="Qbackground">
 <div class="register-box">
    <div class="register-box-body">
       <div class="col-md-6-header">
@@ -9,7 +10,7 @@
             <label class="col-sm-4">Question</label>
             <div class="input-group">
                
-               {{validated-input type="text" model=this valuePath='question' placeholder='Question'}}
+               {{input type="text" model=this valuePath='question' placeholder='Question'}}
             </div>
             <br>
          </div>
@@ -17,7 +18,7 @@
             <label class="col-sm-4"></label>
             <div class="input-group">
                
-               {{validated-input type="text" model=this valuePath='option1' placeholder='Option1'}}
+               {{input type="text" model=this valuePath='option1' placeholder='Option1'}}
             </div>
             <br>
          </div>
@@ -25,7 +26,7 @@
             <label class="col-sm-4"></label>
             <div class="input-group">
               
-               {{validated-input type="option2" model=this valuePath='phonenumber' placeholder='Option2'}}
+               {{input type="option2" model=this valuePath='phonenumber' placeholder='Option2'}}
             </div>
             <br>
          </div>
@@ -33,7 +34,7 @@
             <label class="col-sm-4"></label>
             <div class="input-group">
                
-               {{validated-input type="text" model=this valuePath='option3' placeholder='Option3'}}
+               {{input type="text" model=this valuePath='option3' placeholder='Option3'}}
             </div>
             <br>
          </div>
@@ -41,7 +42,7 @@
             <label class="col-sm-4"></label>
             <div class="input-group">
                
-               {{validated-input type="text" model=this valuePath='option4' placeholder='Option4'}}
+               {{input type="text" model=this valuePath='option4' placeholder='Option4'}}
             </div>
             <br>
          </div>
@@ -50,7 +51,7 @@
             <label class="col-sm-4"></label>
             <div class="input-group">
                
-               {{validated-input type="text" model=this valuePath='answer' placeholder='Answer'}}
+               {{input type="text" model=this valuePath='answer' placeholder='Answer'}}
             </div>
             <br>
          </div>
@@ -58,8 +59,9 @@
           <br> {{select-component dropdowntype="test" listitem=testlist selecteditemlist=selectedtest}}
          </div>
          <div class="btn-taketest">
-            <button type="button" class="btn btn-primary" {{action 'registerUser'}} disabled= {{v-get this 'isInvalid'}}> Submit</button>
+            <button type="button" class="btn btn-primary" {{action 'questionlist'}}> Submit</button>
          </div>
       </div>
    </div>
+</div>
 </div>
