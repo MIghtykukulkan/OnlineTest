@@ -1,17 +1,15 @@
-
 <div>
     <div class="align-q">
         <div class="test-head">
             <h4>Please Start With {{testType}} Test..!!</h4>
         </div>
-        <br> {{#each model as |item|}} {{question-comp Ques=item}}
+
+        
+        <br> {{#each model.message as |item|}} {{question-comp Ques=item}}
         <br> {{/each}}
     </div>
 
-        {{#each model as |item|}} 
-                {{item.id}}<br>
-                {{item.ans}}
-        <br> {{/each}}
+       
 
 
     <div class="btn-calscore">

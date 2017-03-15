@@ -10,17 +10,17 @@ export default Ember.Route.extend({
             this.controllerFor('programming').set('testType', testtype);
                    this.controllerFor('test').set('selectedtest', null);
             
-           /* console.log(testtype);
+            console.log(testtype);
             testtype = testtype.toLowerCase()
             this.set('selectedtest',testtype);
            var data;
-            $.ajax({
+           return $.ajax({
                     url: "http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8081/questions?testtype="+testtype,
                     type: 'GET',
                     accepts: 'application/json',
                     success: function(data) {
-                        alert("success"+JSON.stringify(data))
-                        console.log(data)                     
+                        //alert("success"+JSON.stringify(data))
+                        console.log(JSON.stringify(data))                     
                         return data,
                       
                         console.log('DEBUG: GET Enquiries OK');
@@ -31,16 +31,16 @@ export default Ember.Route.extend({
                         console.log('DEBUG: GET Enquiries Failed');
                     }
                 });
-                return data;
+               
             }
             });
 
-            */
+        
                    
         
- console.log("selectedtest")
+ //console.log("selectedtest")
   
-        if (testtype==="JAVA")
+        /*if (testtype==="JAVA")
         {
           var questionlist = []; 
             
@@ -200,4 +200,4 @@ export default Ember.Route.extend({
     }
    
     }
-});
+}); */

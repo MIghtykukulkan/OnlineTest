@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-    testlist: ['Programming Fundamentals', 'JAVA', 'Language'],
+    testlist: ['Fundamental', 'JAVA', 'Language',],
     actions: {
         questionlist: function() {
             var chosen = this.get('selectedtest');
