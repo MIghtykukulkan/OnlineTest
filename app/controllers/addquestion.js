@@ -1,45 +1,50 @@
 import Ember from 'ember';
-
+import CONFIG from 'online-test/config/environment';
 export default Ember.Controller.extend({
     testlist: ['Fundamental', 'JAVA', 'Language'],
-    
-     actions: {
-          questionlist : function() {
-
-            var question = this.get('question');
-            var option1  = this.get('option1');
-            var option2  = this.get('option2');
-            var option3  = this.get('option3');
-            var option4  = this.get('option4');
-            var answer   = this.get('answer');
-            //var phoneNo = document.getElementById('phone');
-
+    isShowingModal: false,
+    actions: {
+        questionlist: function() {
+            let {
+                question,
+                option1,
+                option2,
+                option3,
+                option4,
+                answer,
+            } = this.getProperties('firstname', 'lastname', 'phonenumber', 'email');
 
             var dataString = {
                 "question": question,
-                "option1" : option1,
-                "option2" : option2,
-                "option3" : option3,
-                "option4" : option4,
-                "answer"  : answer,
+                "option1": option1,
+                "option2": option2,
+                "option3": option3,
+                "option4": option4,
+                "answer": answer,
+            };
+            console.log(CONFIG.GOURL);
+            this.toggleProperty('isShowingModal');
+            this.set('loading_image_visibility', "show");
+            var mycontroller = this;
+            var uid;
+           return $.ajax({
+            url: CONFIG.GOURL+'/',
+            type: 'POST',
+            accepts: 'application/json',
+            data: JSON.stringify(dataString),
+            success: function(response) {
+                   console.log(JSON.stringify(response));
+                   uid = response.message;
+                   mycontroller.set('uid',uid);
+                   mycontroller.toggleProperty('isShowingModal');
+                   mycontroller.set('loading_image_visibility', "hide");
+                   mycontroller.transitionToRoute('test');              
+                  
+            },
+            error: function(result) {
+                   console.log('DEBUG: GET Enquiries Failed');
             }
-            console.log(JSON.stringify(dataString));
-            $.ajax({
-                    type: 'POST',
-                    contentType: 'application/json',
-                    url: 'http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8082/registerUser',
-                    data: dataString,
-                    dataType: "json",
-                    success: function(response) {
-                        this.transitionToRoute('test');
-                        alert(response)
-                    },
-                    failure: function(result) {
-                        alert(result)
-                    }
-                })     
-
-                }
+           });
+        }
     }
-
 });
