@@ -27,7 +27,7 @@
 
                     <div class="col-sm-6-btm">
 
-                        <div class="form-group">
+                        <div class="form-inline">
                             <br>
                             <label class="col-sm-4">Login Id</label>
                             <div class="input-group">
@@ -37,10 +37,7 @@
                                 {{validated-input type="text" model=this valuePath='email' placeholder='Login Id'}}
                             </div>
                             <br>
-                        </div>
-
-
-                        <div class="form-group">
+                   
                             <label class="col-sm-4"> Password</label>
                             <div class="input-group">
                                 <div class="input-group-addon">
@@ -52,7 +49,7 @@
                         </div>
 
 
-                        <div>
+                        <div class="btngroup">
                             <button type="button" class="btn btn-primary" {{action 'test'}} disabled={{v-get this 'isInvalid'}}> Sign In</button> 
                             <button type="button" class="btn btn-primary" {{action 'register'}} disabled={{v-get this 'isInvalid'}}> Sign Up</button>
                         </div>
