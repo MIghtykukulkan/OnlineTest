@@ -59,7 +59,7 @@ export default Ember.Controller.extend({
             this.transitionToRoute('home');
         },
 
-        scoreCalculation : function() {
+        /*scoreCalculation : function() {
 
             var lastName = this.get('lname');
             var firstName = this.get('fname');
@@ -127,7 +127,7 @@ export default Ember.Controller.extend({
                     }
                 })     
 
-                }
+                }*/
     },
 
 });
