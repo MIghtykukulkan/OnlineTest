@@ -24,7 +24,7 @@ columns: [
     "title": "Language"
   },
   
-],
+]
  
 /*actions: {
 
@@ -51,5 +51,5 @@ columns: [
             }
             }); */
 
-}
+
 });
