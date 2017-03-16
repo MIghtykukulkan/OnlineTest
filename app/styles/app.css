@@ -24,7 +24,7 @@
 
 .home-background {
     background-color:lightgoldenrodyellow;
-    position: fixed;
+    position: relative;
     height: 1000px;
     width: 1050px;
 }
