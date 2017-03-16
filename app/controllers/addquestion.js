@@ -37,7 +37,7 @@ export default Ember.Controller.extend({
                    uid = response.message;
                    mycontroller.set('uid',uid);
                    mycontroller.toggleProperty('isShowingModal');
-                   mycontroller.set('loading_image_visibility', "hide");
+                   //mycontroller.set('loading_image_visibility', "hide");
                    mycontroller.transitionToRoute('test');              
                   
             },

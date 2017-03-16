@@ -310,14 +310,34 @@ body.centered-modal-showing {
 .testlist{
     
     position: relative;
-    top: -30px;
-    left: 18px;
+    top: -40px;
+    left: 38px;
 }
 .Qbackground{
      background-color:lightgoldenrodyellow;
      position: relative;
      width: 1000px;
-     height: 650px;
+     height: 700px;
+}
+.adj{
+     position: relative;
+    top: 27px;
+    left: -25px;
+}
+.Que{
+    position: relative;
+    top: -20px;
+    left: 38px;
+}
+.Qinput-group{
+    position: relative;
+   top: -18px;
+    left: -28px; 
+}
+.Qbtn-taketest{
+   position: relative;
+    top: -6px;
+    left: 38px;  
 }
 .score{
       -webkit-text-fill-color: green;
