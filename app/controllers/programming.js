@@ -3,7 +3,7 @@ import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
     isShowingModal: false,
-   
+
     actions: {
          
         toggleModal: function() {
@@ -129,7 +129,7 @@ export default Ember.Controller.extend({
 
                 }
     },
-  
-
 
 });
+  
+
