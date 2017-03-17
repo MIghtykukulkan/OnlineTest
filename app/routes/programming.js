@@ -7,11 +7,11 @@ export default Ember.Route.extend({
     model(){
 
             var message = this.controllerFor('home').get('token');
-            alert(message);
+           console.log('message');
             this.controllerFor('Programming').set('token', message);
 
             var message = this.controllerFor('register').get('uid');
-            alert(message);
+            console.log('message');
             this.controllerFor('programming').set('uid', message);
 
             var testtype = this.controllerFor('test').get('selectedtest');
@@ -35,7 +35,7 @@ export default Ember.Route.extend({
                     },
                     error: function(err) {
                         console.log(data)
-                        alert(err)
+                        console.log('err')
                         console.log('DEBUG: GET Enquiries Failed');
                     }
                 });
