@@ -6,13 +6,17 @@ export default Ember.Route.extend({
 
     model(){
 
-            
+            var message = this.controllerFor('home').get('token');
+            alert(message);
+            this.controllerFor('Programming').set('token', message);
+
             var message = this.controllerFor('register').get('uid');
             alert(message);
             this.controllerFor('programming').set('uid', message);
+
             var testtype = this.controllerFor('test').get('selectedtest');
             this.controllerFor('programming').set('testType', testtype);
-                   this.controllerFor('test').set('selectedtest', null);
+            this.controllerFor('test').set('selectedtest', null);
             
             console.log(testtype);
             testtype = testtype.toLowerCase()
