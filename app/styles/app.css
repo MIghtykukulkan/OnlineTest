@@ -343,25 +343,24 @@ body.centered-modal-showing {
     left: 38px;
 }
 .Qbackground{
-     background-color:lightgoldenrodyellow;
      position: relative;
-     width: 1000px;
-     height: 700px;
+     
+     
 }
 .adj{
      position: relative;
-    top: 27px;
-    left: -25px;
+    top: -2px;
+    left: -18px;
 }
 .Que{
     position: relative;
     top: -20px;
-    left: 38px;
+    left: -35px;
 }
 .Qinput-group{
     position: relative;
    top: -18px;
-    left: -28px; 
+    left: -41px; 
 }
 .Qbtn-taketest{
    position: relative;
