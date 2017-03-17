@@ -1,105 +1,98 @@
-register.hbs
-
-
 <div class="home-background">
-<div class="register-box">
-   <div class="register-box-body">
-      
-      <div class="col-md-6-header">
-         <h4>Register Here...!!!</h4>
-      </div>
-      
-      <div class="col-sm-6-btm">
-                
+    <div class="register-box">
+        <div class="register-box-body">
 
-         
-         <div class="form-group">
-            <br>
-            <label class="col-sm-4">First Name</label>
-            <div class="input-group">
-               <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-user"></span>
-               </div>
-               {{validated-input type="text" model=this valuePath='firstname' placeholder='First Name'}}
+            <div class="col-md-6-header">
+                <h4>Register Here...!!!</h4>
             </div>
-            <br>
-         </div>
+
+            <div class="col-sm-6-btm">
 
 
-         <div class="form-group">
-            <label class="col-sm-4">Last Name</label>
-            <div class="input-group">
-               <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-user"></span>
-               </div>
-               {{validated-input type="text" model=this valuePath='lastname' placeholder='Last Name'}}
+
+                <div class="form-group">
+                    <br>
+                    <label class="col-sm-4">First Name</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </div>
+                        {{validated-input type="text" model=this valuePath='fname' placeholder='First Name'}}
+                    </div>
+                    <br>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-4">Last Name</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </div>
+                        {{validated-input type="text" model=this valuePath='lname' placeholder='Last Name'}}
+                    </div>
+                    <br>
+                </div>
+
+
+
+                <div class="form-group">
+                    <label class="col-sm-4">Phone</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-earphone"></span>
+                        </div>
+                        {{validated-input type="number" model=this valuePath='phone' placeholder='Phone Number'}}
+                    </div>
+                    <br>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-4">Login Id</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-envelope"></span>
+                        </div>
+                        {{validated-input type="text" model=this valuePath='email' placeholder='Email id'}}
+                    </div>
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-4">Password</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </div>
+                        {{validated-input type="password" model=this valuePath="password" placeholder='Password'}}
+                    </div>
+                    <br>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-4">Retype Password</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                        </div>
+                        {{validated-input type="password" valuePath="confirmpassword" model=this placeholder='Retype Password'}}
+                    </div>
+                    <br>
+                </div>
+
+
+                <div class="btn-taketest">
+                    <button type="button" class="btn btn-primary" {{action 'registerUser'}}> Take Test</button>
+                </div>
+
+
             </div>
-            <br>
-         </div>
-
-         
-
-         <div class="form-group">
-            <label class="col-sm-4">Phone</label>
-            <div class="input-group">
-               <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-earphone"></span>
-               </div>
-               {{validated-input type="number" model=this valuePath='phonenumber' placeholder='Phone Number'}}
-            </div>
-            <br>
-         </div>
-
-
-         <div class="form-group">
-            <label class="col-sm-4">Login Id</label>
-            <div class="input-group">
-               <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-envelope"></span>
-               </div>
-               {{validated-input type="text" model=this valuePath='email' placeholder='Email id'}}
-            </div>
-            <br>
-         </div>
-
-          <div class="form-group">
-            <label class="col-sm-4">Password</label>
-            <div class="input-group">
-               <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-user"></span>
-               </div>
-               {{validated-input type="password" model=this valuePath="password" placeholder='Password'}}
-            </div>
-            <br>
-         </div>
-
-         <div class="form-group">
-            <label class="col-sm-4">Retype Password</label>
-            <div class="input-group">
-               <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-user"></span>
-               </div>
-               {{validated-input type="password" valuePath="confirmpassword" model=this placeholder='Retype Password'}}
-            </div>
-            <br>
-         </div>
-
-
-         <div class="btn-taketest">
-            <button type="button" class="btn btn-primary" {{action 'registerUser'}}> Take Test</button>
-         </div>
-
-
-      </div>
-   </div>
-</div>
-</div>
-{{#if isShowingModal}} 
-    {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
-        {{partial "loading-image"}}
-    {{/modal-dialog}}
-{{/if}}
-<div class = "login">
-<button type="button" class="btn btn-default btn-sm"{{action "login1"}}>
-          <span class="glyphicon glyphicon-log-out"></span> Login</button>
         </div>
+    </div>
+</div>
+{{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}} {{partial "loading-image"}} {{/modal-dialog}} {{/if}}
+<div class="login">
+    <button type="button" class="btn btn-default btn-sm" {{action "login1"}}>
+        <span class="glyphicon glyphicon-log-out"></span> Login</button>
+</div>
