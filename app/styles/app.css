@@ -23,13 +23,15 @@
 .portalbackground{
     
     background-image: url("images/abstract-backgrounds.jpg");
-    background-repeat: repeat-y;
+    background-repeat: repeat;
 
 }
-
-.container{
-      height: 100vh;
+.subcontainer{
+    height: 100vh;
+}
+.container{      
     background: rgba(122, 130, 136, 0.5)!important;
+    background-repeat: repeat-y;
 }
 .btn-reg {
     position: relative;
@@ -95,7 +97,7 @@
 .btn-calscore {
     position: relative;
     left: 470px;
-    top: 100px;
+    padding-bottom: 50px;
 }
 
 .form-group-test {
@@ -110,6 +112,7 @@
     position: relative;
     text-align: left;
     left: 80px;
+    background-repeat: repeat;
 }
 
 .test-head {
