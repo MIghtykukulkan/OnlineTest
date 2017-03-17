@@ -84,6 +84,7 @@ updateTimeProperty: function () {
                 $.ajax({
                     type: 'POST',
                     accepts: 'application/json',
+                    authenticate: 'token',
                     url: CONFIG.GOURL+'/userAnswer',
                     data: JSON.stringify(datalist),
                     success: function(response) {
@@ -101,8 +102,13 @@ updateTimeProperty: function () {
         toggleModalOk:function(){
             this.transitionToRoute('home');
         },
+    
+     log_out1 : function(){
+            this.transitionToRoute('home');
 
-},
+}
+       
+    },
    
         /*scoreCalculation : function() {
 
