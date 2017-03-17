@@ -23,11 +23,13 @@
 .portalbackground{
     
     background-image: url("images/abstract-backgrounds.jpg");
+    background-repeat: repeat-y;
+
 }
 
 .container{
       height: 100vh;
-    background: rgba(122, 130, 136, 0.2)!important;
+    background: rgba(122, 130, 136, 0.5)!important;
 }
 .btn-reg {
     position: relative;
@@ -52,14 +54,28 @@
     display: inline-block;
     padding: 6px 12px;
 }
-
-.home-background {
-
-  
-
+.register-box {
+    width: 50%;
+    height: 100%;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 2%;
+    
 }
 
-.register-box {
+.register-box-body {
+  
+     background: rgba(5, 5, 5, 0.2)!important;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+     
+    
+}
+.home-box {
     width: 50%;
     height: 100%;
     margin-top: auto;
@@ -69,11 +85,10 @@
     text-align: center;
     padding-top: 15%;
 }
-
-.register-box-body {
+.home-box-body {
   
-      background: rgba(122, 130, 136, 0.2)!important;
-    padding-top: 20px;
+     background: rgba(5, 5, 5, 0.2)!important;
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 
@@ -98,7 +113,7 @@
 }
 
 .test-head {
-    -webkit-text-fill-color: green;
+    -webkit-text-fill-color: darkred;
 }
 
 .ember-modal-overlay {
@@ -349,13 +364,14 @@ body.centered-modal-showing {
 }
 .adj{
      position: relative;
-    top: -2px;
+    top: 20px;
     left: -18px;
+    font-size: large;
 }
 .Que{
     position: relative;
     top: -20px;
-    left: -35px;
+    left: 40px;
 }
 .Qinput-group{
     position: relative;
@@ -372,6 +388,12 @@ body.centered-modal-showing {
    position:fixed;
    right:10px;
    top:5px;
+    -webkit-text-fill-color:black;
+}
+.login{
+position:fixed;
+   right:10px;
+   top:5px;    
 }
 .score{
       -webkit-text-fill-color: green;
@@ -388,4 +410,7 @@ body.centered-modal-showing {
     width: auto;
     background-color:green;
     color: white;
+}
+.text-color{
+    -webkit-text-fill-color: white;
 }

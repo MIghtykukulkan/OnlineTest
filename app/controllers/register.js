@@ -68,6 +68,10 @@ var Validations = buildValidations({
 export default Ember.Controller.extend(Validations, {
     isShowingModal: false,
     actions: {
+        login1:function(){
+            this.transitionToRoute('home');
+
+},
         registerUser: function() {
             let {
                 firstname,
