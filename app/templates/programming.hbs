@@ -31,7 +31,10 @@
         <button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>
     </div>
     {{/modal-dialog}} {{/if}}
-    <div>   
+   <!-- <div>   
  <button type="button"{{action "onScroll"}}>top</button>
+</div>-->
+<div class ="timer" id="divFloatTimer" {{action "init"}}>
+Time Left : {{dispmin}}:{{seconds}}
 </div>
 </div>
