@@ -1,3 +1,32 @@
+<SCRIPT language="javascript">
+function add(type) {
+
+//Create an input type dynamically.
+var element = document.createElement("input");
+
+	//Assign different attributes to the element.
+		element.setAttribute("value", type);
+
+	var foo = document.getElementById("fooBar");
+
+	//Append the element in page (in span).
+	foo.appendChild(element);
+
+}
+</SCRIPT>
+<FORM>
+<BR/>
+<SELECT name="element">
+ <OPTION value="Option">Textbox</OPTION>
+</SELECT>
+  <INPUT type="button" value="Add" onclick="add(document.forms[0].element.value)"/>
+  <br>
+  
+<span id="fooBar">&nbsp;</span>
+</FORM>
+
+
+
 <div class ="Qbackground">
 <div class="register-box">
    <div class="register-box-body">
@@ -11,9 +40,7 @@
             <label class="col-sm-4">Question</label>
             </div>
             <div class="Que">
-
-               <textarea rows="3" cols="40" placeholder="Question"></textarea>
-          
+                <textarea rows="3" cols="40" placeholder="Question"></textarea>
             </div>
             <br>
          </div>
@@ -66,5 +93,6 @@
          </div>
       </div>
    </div>
+
 </div>
 </div>

@@ -339,6 +339,12 @@ body.centered-modal-showing {
     top: -6px;
     left: 38px;  
 }
+.logout{
+
+   position:fixed;
+   right:10px;
+   top:5px;
+}
 .score{
       -webkit-text-fill-color: green;
       text-align: center;

@@ -58,6 +58,10 @@ export default Ember.Controller.extend({
         toggleModalOk:function(){
             this.transitionToRoute('home');
         },
+        log_out1:function(){
+            this.transitionToRoute('home');
+        }
+    },
 
         /*scoreCalculation : function() {
 
@@ -128,7 +132,7 @@ export default Ember.Controller.extend({
                 })     
 
                 }*/
-    },
+    
 
 });
   
