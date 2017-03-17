@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     isShowingModal: false,
 
      seconds : 60,
-     minutes : 2,
+     minutes : 10,
      
      watchmin : function(){
          this.set('dispmin', this.get('minutes')-1)
@@ -21,7 +21,7 @@ updateTimeProperty: function () {
       var seconds = this.get('seconds')
       var minutes = this.get('minutes')
       seconds--;
-      console.log(seconds)
+      //console.log(seconds)
       if(seconds==0){
           minutes--;
           seconds=60;
@@ -45,7 +45,8 @@ updateTimeProperty: function () {
     actions: {
 
         exitaction: function(){
-             this.toggleProperty('isShowingModal');
+            
+            this.toggleProperty('isShowingModal');
         },
          
         toggleModal: function() {
