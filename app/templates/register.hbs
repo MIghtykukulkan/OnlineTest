@@ -3,7 +3,7 @@
    <div class="register-box-body">
       
       <div class="col-md-6-header">
-         <h4>Register Here...!!!</h4>
+         <h4 class="text-color">Register Here...!!!</h4>
       </div>
       
       <div class="col-sm-6-btm">
@@ -12,7 +12,8 @@
          
          <div class="form-group">
             <br>
-            <label class="col-sm-4">First Name</label>
+              <div class="text-color">
+            <label class="col-sm-4">First Name</label></div>
             <div class="input-group">
                <div class="input-group-addon">
                   <span class="glyphicon glyphicon-user"></span>
@@ -24,7 +25,8 @@
 
 
          <div class="form-group">
-            <label class="col-sm-4">Last Name</label>
+               <div class="text-color">
+            <label class="col-sm-4">Last Name</label></div>
             <div class="input-group">
                <div class="input-group-addon">
                   <span class="glyphicon glyphicon-user"></span>
@@ -37,7 +39,8 @@
          
 
          <div class="form-group">
-            <label class="col-sm-4">Phone</label>
+               <div class="text-color">
+            <label class="col-sm-4">Phone</label></div>
             <div class="input-group">
                <div class="input-group-addon">
                   <span class="glyphicon glyphicon-earphone"></span>
@@ -49,7 +52,8 @@
 
 
          <div class="form-group">
-            <label class="col-sm-4">Email</label>
+               <div class="text-color">
+            <label class="col-sm-4">Email</label></div>
             <div class="input-group">
                <div class="input-group-addon">
                   <span class="glyphicon glyphicon-envelope"></span>
@@ -59,22 +63,12 @@
             <br>
          </div>
 
-<div class="form-group">
-            <label class="col-sm-4">Login Id</label>
-            <div class="input-group">
-               <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-user"></span>
-               </div>
-               {{validated-input type="text" model=this valuePath='loginid' placeholder='Login Id'}}
-            </div>
-            <br>
-         </div>
-
           <div class="form-group">
-            <label class="col-sm-4">Password</label>
+                <div class="text-color">
+            <label class="col-sm-4">Password</label></div>
             <div class="input-group">
                <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-user"></span>
+                  <span class="glyphicon glyphicon-lock"></span>
                </div>
                {{validated-input type="password" model=this valuePath="password" placeholder='Password'}}
             </div>
@@ -82,10 +76,11 @@
          </div>
 
          <div class="form-group">
-            <label class="col-sm-4">Retype Password</label>
+               <div class="text-color">
+            <label class="col-sm-4">Retype Password</label></div>
             <div class="input-group">
                <div class="input-group-addon">
-                  <span class="glyphicon glyphicon-user"></span>
+                  <span class="glyphicon glyphicon-lock"></span>
                </div>
                {{validated-input type="password" valuePath="confirmpassword" model=this placeholder='Retype Password'}}
             </div>

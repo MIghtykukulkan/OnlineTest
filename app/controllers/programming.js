@@ -45,7 +45,7 @@ updateTimeProperty: function () {
     actions: {
 
         exitaction: function(){
-            alert("your time is over");
+             this.toggleProperty('isShowingModal');
         },
          
         toggleModal: function() {

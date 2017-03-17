@@ -1,6 +1,6 @@
 
 
-<div>
+<div class="text-color">
     <div class="align-q">
         <div class="test-head">
             <h4>Please Start With {{testType}} Test..!!</h4>
@@ -29,6 +29,17 @@
         </div>
         <br>
         <button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>
+    </div>
+    {{/modal-dialog}} {{/if}}
+     {{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
+    <div>
+        congratulations..!!
+        <br> Your Score Is <br>
+        <div class="score">
+        {{score}}/25
+        </div>
+        <br>
+        <button type="button" class="btn btn-success" {{action "exitaction"}}>submit</button>
     </div>
     {{/modal-dialog}} {{/if}}
    <!-- <div>   

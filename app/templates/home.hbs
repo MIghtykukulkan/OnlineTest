@@ -12,16 +12,16 @@
 </div> -->
 
 <div class="home-background">
-    <div class="register-box">
-        <div class="register-box-body">
+    <div class="home-box">
+        <div class="home-box-body">
 
 
             
-                <h1 align="center">RpQbOTP</h1>
+                <h1 class="text-color"align="center">RpQbOTP</h1>
                 <br>
 
                 <div class="col-md-6-header">
-                    <h4>Login Here...!!!</h4>  </div>
+                    <h4 class="text-color">Login Here...!!!</h4>  </div>
 
 
 
@@ -29,7 +29,9 @@
 
                         <div class="form-inline">
                             <br>
+                            <div class="text-color">
                             <label class="col-sm-4">Login Id</label>
+                            </div>
                             <div class="input-group">
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-user"></span>
@@ -37,11 +39,13 @@
                                 {{validated-input type="text" model=this valuePath='email' placeholder='Login Id'}}
                             </div>
                             <br>
-                   
+                            <br>
+                            <div class="text-color">
                             <label class="col-sm-4"> Password</label>
+                            </div>
                             <div class="input-group">
                                 <div class="input-group-addon">
-                                    <span class="glyphicon glyphicon-user"></span>
+                                    <span class="glyphicon glyphicon-lock"></span>
                                 </div>
                                 {{validated-input type="password" value="password" model=this valuePath='password' placeholder='Password'}}
                             </div>
