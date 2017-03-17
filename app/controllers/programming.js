@@ -55,7 +55,7 @@ updateTimeProperty: function () {
 
             console.log(JSON.stringify(dataStringsc));
            
-            alert(this.get('uid'));
+           console.log('uid');
 
            // this.toggleProperty('isShowingModal');
           
@@ -71,9 +71,9 @@ updateTimeProperty: function () {
           var dataStringsc ={
                     "uid": message,
                     "q_type": model[i].id,
-                    "selected": model[i].userAnswer
-                     
+                    "selected": model[i].userAnswer   
                 }
+
         
                 datalist[i] = dataStringsc;
              

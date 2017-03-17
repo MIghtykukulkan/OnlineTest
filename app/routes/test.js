@@ -7,8 +7,9 @@ export default Ember.Route.extend({
 
     model: function() {
           var message = this.controllerFor('home').get('token');
-            alert(message);
+           console.log('message');
             this.controllerFor('test').set('token', message); 
+             this.controllerFor('test').set('loading_image_visibility', 'hide');
     }
     /* client does not have a valid session token */
     /* client has a persisted token */
