@@ -1,7 +1,5 @@
 import Ember from 'ember';
 import CONFIG from 'online-test/config/environment';
-
-
 export default Ember.Route.extend({
      model() {
         console.log(CONFIG);

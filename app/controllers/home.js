@@ -42,23 +42,33 @@ export default Ember.Controller.extend(Validations, {
             var mycontroller = this;
             var uid,fname,token,usertype;
             return $.ajax({
-            url: CONFIG.GOURL+'/login',
+            url: CONFIG.GOURL+'/mocklogin',
             type: 'POST',
             accepts: 'application/json',
             data: JSON.stringify(dataString),
             success: function(response) {
+                var message=response.message;
+                var status=response.status;
+                if (status=="success")
+                {
                    console.log(JSON.stringify(response));
-                   uid = response.uid;
-                   fname=response.fname;
-                   token=response.token;
-                   usertype=response.usertype;
+                   uid = message.uid;
+                   fname=message.fname;
+                   token=message.token;
+                   usertype=message.usertype;
                    mycontroller.set('uid',uid);
-                   mycontroller.set('uid',fname);
-                   mycontroller.set('uid',token);
-                   mycontroller.set('uid',usertype);
+                   mycontroller.set('fname',fname);
+                   mycontroller.set('token',token);
+                   mycontroller.set('usertype',usertype);
                    mycontroller.toggleProperty('isShowingModal');
                    mycontroller.set('loading_image_visibility', "hide");
                    mycontroller.transitionToRoute('test');              
+                }
+                else 
+                {
+                     mycontroller.set('token',null);
+                     mycontroller.set('errormessage',"Invalid Credentials");
+                }
                   
             },
             error: function(result) {
