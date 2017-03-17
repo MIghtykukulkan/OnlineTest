@@ -373,6 +373,11 @@ body.centered-modal-showing {
    right:10px;
    top:5px;
 }
+.login{
+position:fixed;
+   right:10px;
+   top:5px;    
+}
 .score{
       -webkit-text-fill-color: green;
       text-align: center;
