@@ -4,7 +4,49 @@ import CONFIG from 'online-test/config/environment';
 export default Ember.Controller.extend({
     isShowingModal: false,
 
+     seconds : 60,
+     minutes : 2,
+     
+     watchmin : function(){
+         this.set('dispmin', this.get('minutes')-1)
+     }.observes('minutes'),
+
+init: function () { 
+            this.set('dispmin', this.get('minutes')-1)
+            this.updateTimeProperty();
+            },
+updateTimeProperty: function () {
+  
+  Ember.run.later(this, function() {
+      var seconds = this.get('seconds')
+      var minutes = this.get('minutes')
+      seconds--;
+      console.log(seconds)
+      if(seconds==0){
+          minutes--;
+          seconds=60;
+      }
+      this.set('seconds',seconds)
+      this.set('minutes',minutes)
+      
+
+      if(minutes==0){         
+          this.send('exitaction')
+      }
+      else{
+        this.updateTimeProperty();
+      }
+    
+  }, 1000);
+},
+
+
+
     actions: {
+
+        exitaction: function(){
+            alert("your time is over");
+        },
          
         toggleModal: function() {
             this.toggleProperty('isShowingModal');
@@ -58,11 +100,9 @@ export default Ember.Controller.extend({
         toggleModalOk:function(){
             this.transitionToRoute('home');
         },
-        log_out1:function(){
-            this.transitionToRoute('home');
-        }
-    },
 
+},
+   
         /*scoreCalculation : function() {
 
             var lastName = this.get('lname');
@@ -132,8 +172,6 @@ export default Ember.Controller.extend({
                 })     
 
                 }*/
-    
 
 });
   
-

@@ -378,3 +378,14 @@ body.centered-modal-showing {
       text-align: center;
       font-size: large;
 }
+.timer{
+   text-align: center;
+    padding: 10px;
+    position: fixed;
+    z-index: 3000000;
+    top: 50px;
+    right: 1px;
+    width: auto;
+    background-color:green;
+    color: white;
+}
