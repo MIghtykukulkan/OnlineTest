@@ -6,18 +6,19 @@ export default Ember.Route.extend({
     //which can be set on controller using setupController method. supercool
 
     model() {
-        return Ember.RSVP.hash({
-            //posts: Ember.$.getJSON('https://api.github.com/users'),
-            //comments: Ember.$.getJSON('https://api.github.com/repositories')
-        });
-    },
+    
+        //console.log(CONFIG);
+        this.controllerFor('home').set('loading_image_visibility', 'hide');
+        this.controllerFor('home').set('loginid', null);
+            },
+    
 
-    setupController(controller, model) {
+  /*  setupController(controller, model) {
         var posts = model.posts;
         var comments = model.comments;
 
         controller.set('content', posts);
         controller.set('comments', comments);
-    }
+    }*/
 
 });

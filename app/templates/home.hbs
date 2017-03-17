@@ -36,7 +36,7 @@
                                 <div class="input-group-addon">
                                     <span class="glyphicon glyphicon-user"></span>
                                 </div>
-                                {{validated-input type="text" model=this valuePath='email' placeholder='Login Id'}}
+                                    {{validated-input type="text" model=this valuePath='email' placeholder='Login Id'}}
                             </div>
                             <br>
                             <br>
@@ -52,9 +52,9 @@
                             <br>
                         </div>
 
-
+                        {{errormessage}}
                         <div class="btngroup">
-                            <button type="button" class="btn btn-primary" {{action 'test'}} disabled={{v-get this 'isInvalid'}}> Sign In</button> 
+                            <button type="button" class="btn btn-primary" {{action 'login'}} disabled={{v-get this 'isInvalid'}}> Sign In</button> 
                             <button type="button" class="btn btn-primary" {{action 'register'}} disabled={{v-get this 'isInvalid'}}> Sign Up</button>
                         </div>
 
