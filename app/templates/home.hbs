@@ -1,4 +1,4 @@
-<div class="home-background">
+<!--<div class="home-background">
     <div class="img-home">
         <img src="../assets/images/home_backgroud_mocktest14.jpg" width="100%" height="400px" class="imagesize" />
     </div>
@@ -9,4 +9,57 @@
             <button type="button" class="btn btn-primary" {{action 'register'}}>Register</button>
         </div>
     </p>
+</div> -->
+
+<div class="home-background">
+    <div class="register-box">
+        <div class="register-box-body">
+
+
+            
+                <h1 align="center">RpQbOTP</h1>
+                <br>
+
+                <div class="col-md-6-header">
+                    <h4>Login Here...!!!</h4>  </div>
+
+
+
+                    <div class="col-sm-6-btm">
+
+                        <div class="form-inline">
+                            <br>
+                            <label class="col-sm-4">Login Id</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </div>
+                                {{validated-input type="text" model=this valuePath='email' placeholder='Login Id'}}
+                            </div>
+                            <br>
+                   
+                            <label class="col-sm-4"> Password</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </div>
+                                {{validated-input type="password" value="password" model=this valuePath='password' placeholder='Password'}}
+                            </div>
+                            <br>
+                        </div>
+
+
+                        <div class="btngroup">
+                            <button type="button" class="btn btn-primary" {{action 'test'}} disabled={{v-get this 'isInvalid'}}> Sign In</button> 
+                            <button type="button" class="btn btn-primary" {{action 'register'}} disabled={{v-get this 'isInvalid'}}> Sign Up</button>
+                        </div>
+
+                    </div>
+
+                
+
+
+            
+        </div>
+    </div>
 </div>

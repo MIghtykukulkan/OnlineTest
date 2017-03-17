@@ -3,8 +3,9 @@
     <div class="navbar-header">
     </div>
     <div class="collapse navbar-collapse" id="menu-collapse">
+        <span class="logo"> </span>
         <ul class="nav navbar-nav">
-            <li>{{ link-to 'Home' 'home'}}</li>
+            <li> {{ link-to 'Home' 'home'}} ></li>
             <li>{{ link-to 'Test' 'test' }}</li>
             <li>{{ link-to 'Take a Challenge' 'challenge'}}</li>
             <li>{{ link-to 'Report' 'report' invokeAction='reportCard'}}</li>
@@ -13,9 +14,10 @@
     </div>
 
 </nav>
-
-<div class="row">
+<div class="portalbackground">
+<div class="container">
     <div class="col-sm-12">
         {{outlet}}
     </div>
+</div>
 </div>
