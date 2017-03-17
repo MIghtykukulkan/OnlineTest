@@ -1,3 +1,34 @@
+.navbar-nav{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.navbar-nav li{
+        padding-left: 20px;
+    padding-right: 17px;
+}
+
+.logo {
+    width: 50px;
+    background-image: url("images/Rapidqube Logo.jpg");
+    background-repeat: repeat-x;
+    background-color: rgb(72,131,175);
+    position: fixed;
+    height: 39px;
+}
+.btngroup{
+    padding-top: 10%;
+}
+
+.portalbackground{
+    
+    background-image: url("images/abstract-backgrounds.jpg");
+}
+
+.container{
+      height: 100vh;
+    background: rgba(122, 130, 136, 0.2)!important;
+}
 .btn-reg {
     position: relative;
     left: 470px;
@@ -23,29 +54,27 @@
 }
 
 .home-background {
-    background-color:lightgoldenrodyellow;
-    position: fixed;
-    height: 1000px;
-    width: 1050px;
+
+  
+
 }
 
 .register-box {
-    width: 450px;
-    height: 258px;
+    width: 50%;
+    height: 100%;
     margin-top: auto;
     margin-right: auto;
     margin-bottom: auto;
     margin-left: auto;
     text-align: center;
+    padding-top: 15%;
 }
 
 .register-box-body {
-    color: black;
-    background: lightgray;
-    padding: 20px;
-    position: relative;
-    top: 50px;
-    left: 20px;
+  
+      background: rgba(122, 130, 136, 0.2)!important;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .btn-calscore {

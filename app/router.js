@@ -25,6 +25,7 @@ Router.map(function() {
   this.route('programming');
   this.route('test');
   this.route('addquestion');
+  this.route('login');
 });
 
 export default Router;

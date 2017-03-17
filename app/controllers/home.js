@@ -10,6 +10,9 @@ export default Ember.Controller.extend({
     actions: {
         register: function() {
             this.transitionToRoute('register');
+        },
+        test : function() {
+            this.transitionToRoute('test');
         }
     }
 });
