@@ -75,24 +75,26 @@ export default Ember.Controller.extend(Validations, {
 },
         registerUser: function() {
             let {
-                firstname,
-                lastname,
-                phonenumber,
-                email
-            } = this.getProperties('firstname', 'lastname', 'phonenumber', 'email');
+                fname,
+                lname,
+                phone,
+                email,
+                password
+            } = this.getProperties('fname', 'lname', 'phone', 'email','password');
 
             var dataString = {
-                "fname": firstname,
-                "lname": lastname,
-                "phone": phonenumber,
-                "email": email
+                "fname": fname,
+                "lname": lname,
+                "phone": phone,
+                "email": email,
+                "password":password,
             };
             console.log(CONFIG.GOURL);
             this.toggleProperty('isShowingModal');
             this.set('loading_image_visibility', "show");
             var mycontroller = this;
             var uid;
-           return $.ajax({
+            return $.ajax({
             url: CONFIG.GOURL+'/registerUser',
             type: 'POST',
             accepts: 'application/json',

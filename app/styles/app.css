@@ -13,7 +13,7 @@
     background-image: url("images/Rapidqube Logo.jpg");
     background-repeat: repeat-x;
     background-color: rgb(72,131,175);
-    position: fixed;
+    position: absolute;
     height: 39px;
 }
 .btngroup{
