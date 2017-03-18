@@ -386,12 +386,18 @@ body.centered-modal-showing {
     top: -6px;
     left: 38px;  
 }
-.logout{
+.logoutT{
 
-   position:fixed;
-   right:10px;
-   top:5px;
-    -webkit-text-fill-color:black;
+   position:absolute;
+   padding-left:880px;
+   bottom: 275px;
+   -webkit-text-fill-color:black;
+}
+.logoutP{
+     position:absolute;
+   padding-left:880px;
+   bottom:495px;
+   -webkit-text-fill-color:black;
 }
 .login{
 position:fixed;
