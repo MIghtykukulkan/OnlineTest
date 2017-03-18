@@ -69,6 +69,7 @@ export default Ember.Controller.extend(Validations, {
     isShowingModal: false,
     actions: {
         login1:function(){
+            sessionStorage.setItem('token', "TEST");
             this.transitionToRoute('home');
 
 },

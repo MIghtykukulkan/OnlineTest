@@ -1,12 +1,24 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+    //session: Ember.inject.service(),
+
     testlist: ['Fundamental', 'JAVA', 'Language',],
     actions: {
+        /* authenticate: function() {
+      var credentials = this.getProperties('identification', 'password'),
+        authenticator = 'authenticator:token';
+
+      this.get('session').authenticate(authenticator, credentials);
+    },*/
+    
+    
          log_out1 : function(){
             this.transitionToRoute('home');
+            
          },
 
+       
         questionlist: function() {
             var chosen = this.get('selectedtest');
         console.log(chosen);

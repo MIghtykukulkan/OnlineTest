@@ -6,6 +6,7 @@ export default Ember.Route.extend({
 
     model(){
 
+            console.log("Token Fetched: " + sessionStorage.getItem('token'));
             var message = this.controllerFor('home').get('token');
             alert(message);
             this.controllerFor('Programming').set('token', message);
