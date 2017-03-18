@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
     isShowingModal: false,
 
      seconds : 60,
-     minutes : 10,
+     minutes : 1,
      
      watchmin : function(){
          this.set('dispmin', this.get('minutes')-1)
