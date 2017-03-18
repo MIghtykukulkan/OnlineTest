@@ -14,6 +14,8 @@ export default Ember.Controller.extend({
     
     
          log_out1 : function(){
+              sessionStorage.setItem('token', null);
+             // delete localStorage['Token']
             this.transitionToRoute('home');
             
          },
