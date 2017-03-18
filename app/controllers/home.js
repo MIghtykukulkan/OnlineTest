@@ -56,6 +56,8 @@ export default Ember.Controller.extend(Validations, {
                         fname = message.fname;
                         token = message.token;
                         usertype = message.usertype;
+                        sessionStorage.setItem('token', token);
+                        
                         mycontroller.set('uid', uid);
                         mycontroller.set('fname', fname);
                         mycontroller.set('token', token);
