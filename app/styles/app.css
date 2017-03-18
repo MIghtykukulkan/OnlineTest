@@ -23,11 +23,12 @@
 .portalbackground{
     
     background-image: url("images/abstract-backgrounds.jpg");
-    background-repeat: repeat;
-
+    background-repeat: repeat-x;
+   
 }
 .subcontainer{
     height: 100vh;
+   
 }
 .container{      
     background: rgba(122, 130, 136, 0.5)!important;
@@ -396,7 +397,7 @@ body.centered-modal-showing {
 .logoutP{
      position:absolute;
    padding-left:880px;
-   bottom:495px;
+ bottom: 275px;
    -webkit-text-fill-color:black;
 }
 .login{
