@@ -47,9 +47,7 @@
             </div>
         {{/modal-dialog}}
    {{/if}}
-   <div class ="timer" id="divFloatTimer" {{action "init"}}>
-        Time Left : {{dispmin}}:{{seconds}}
-   </div>
+   {{timer-component action="exitaction"}}
 </div>
 <div class = "logoutP">
    <button type="button" class="btn btn-default btn-sm"{{action "log_out1"}}>
