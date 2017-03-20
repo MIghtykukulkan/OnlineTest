@@ -3,10 +3,8 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
     model() {
-        this.controllerFor('test').set('loading_image_visibility', 'show');
-         
-         
-          var message = this.controllerFor('home').get('token');
+       
+           var message = this.controllerFor('home').get('token');
            console.log('message');
            this.toggleProperty('isShowingModal');
             this.controllerFor('test').set('token', message);
@@ -18,6 +16,7 @@ export default Ember.Route.extend({
             {
                 this.transitionTo('home');
             }
+             this.controllerFor('test').set('loading_image_visibility', 'show');
     },
     
 afterModel : function() {
