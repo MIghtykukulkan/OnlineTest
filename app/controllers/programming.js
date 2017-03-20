@@ -22,7 +22,7 @@ updateTimeProperty: function () {
       var minutes = this.get('minutes')
       seconds--;
       //console.log(seconds)
-      if(seconds==0){
+      if(seconds== -1){
           minutes--;
           seconds=60;
       }
@@ -51,6 +51,7 @@ updateTimeProperty: function () {
          
         toggleModal: function() {
             this.toggleProperty('isShowingModal');
+          
             console.log("toggled");
 
             console.log(JSON.stringify(dataStringsc));
@@ -101,6 +102,9 @@ updateTimeProperty: function () {
         },
         toggleModalOk:function(){
             this.transitionToRoute('home');
+        },
+        toggleModalNext:function(){
+            this.transitionToRoute('test');
         },
     
      log_out1 : function(){
