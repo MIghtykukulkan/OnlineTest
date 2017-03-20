@@ -7,14 +7,7 @@ export default Ember.Controller.extend({
 
     testlist: ['Fundamental', 'JAVA', 'Language',],
     actions: {
-        /* authenticate: function() {
-      var credentials = this.getProperties('identification', 'password'),
-        authenticator = 'authenticator:token';
-
-      this.get('session').authenticate(authenticator, credentials);
-    },*/
-    
-    
+        
          /*log_out1 : function(){
               sessionStorage.setItem('token', null);
             this.transitionToRoute('home');
