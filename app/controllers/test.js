@@ -2,6 +2,7 @@ import Ember from 'ember';
 import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
+     isShowingModal: false,
     //session: Ember.inject.service(),
 
     testlist: ['Fundamental', 'JAVA', 'Language',],
@@ -62,6 +63,8 @@ export default Ember.Controller.extend({
                 this.set('chosenTest', chosen);
                 this.transitionToRoute('programming');
             }
+            
+
         },
              success: function() {
                   
@@ -70,8 +73,10 @@ export default Ember.Controller.extend({
                     mycontroller.transitionToRoute('programming');             
                   
             },
+            error: function(result) {
+                   console.log('DEBUG: GET Enquiries Failed');
         }
     
 
-
+    }
 });
