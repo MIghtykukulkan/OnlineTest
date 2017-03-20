@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
     //session: Ember.inject.service(),
@@ -13,12 +14,36 @@ export default Ember.Controller.extend({
     },*/
     
     
-         log_out1 : function(){
+         /*log_out1 : function(){
               sessionStorage.setItem('token', null);
-             // delete localStorage['Token']
             this.transitionToRoute('home');
             
-         },
+         },*/
+        log_out1 : function() {
+    
+            console.log(CONFIG.GOURL);
+           // this.toggleProperty('isShowingModal');
+           // this.set('loading_image_visibility', "show");
+            var mycontroller = this;
+           // var uid;
+            return $.ajax({
+            url: CONFIG.GOURL + '/logout',
+            type: 'GET',
+            accepts: 'application/json',
+            authenticate: 'token',
+            success: function(response) {
+                   console.log(JSON.stringify(response));
+                   //uid = response.message;
+                  // mycontroller.set('uid',uid);
+                   sessionStorage.setItem('token', null);
+                   mycontroller.transitionToRoute('home');              
+                  
+            },
+            error: function(result) {
+                   console.log('DEBUG: GET Enquiries Failed');
+            }
+           });
+        },
 
        
         questionlist: function() {

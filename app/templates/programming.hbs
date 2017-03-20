@@ -1,47 +1,55 @@
-
+<script>
+   $(document).ready(function() {
+    // Show or hide the sticky footer button
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+            $('.go-top').fadeIn(200);
+        } else {
+            $('.go-top').fadeOut(200);
+         }
+    });
+    
+    // Animate the scroll to top
+    $('.go-top').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 300);
+    })
+   });
+</script>
 
 <div class="text-color">
-    <div class="align-q">
-        <div class="test-head">
-
-{{token}}
-            <h4>Please Start With {{testType}} Test..!!</h4>
-        </div>
-
-        
-        <br> {{#each model.message as |item|}} {{question-comp Ques=item}}
-        
-        <br> {{/each}}
-    </div>
-
-       
-
-
-    <div class="btn-calscore">
-
-        <button type="button" class="btn btn-primary" {{action "toggleModal"}}>Calculate Score</button>
-    </div>
-
-    {{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
-    <div>
-        congratulations..!!
-        <br> Your Score Is <br>
-        <div class="score">
-        {{score}}/25
-        </div>
-        <br>
-        <button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>
-    </div>
-    {{/modal-dialog}} {{/if}}
-
-   <!-- <div>   
- <button type="button"{{action "onScroll"}}>top</button>
-</div>-->
-<div class ="timer" id="divFloatTimer" {{action "init"}}>
-Time Left : {{dispmin}}:{{seconds}}
+   <div class="align-q">
+      <div class="test-head">
+         {{token}}
+         <h4>Please Start With {{testType}} Test..!!</h4>
+      </div>
+      <br> {{#each model.message as |item|}} 
+                {{question-comp Ques=item}}
+                <br> 
+           {{/each}}
+   </div>
+   <div class="btn-calscore">
+      <button type="button" class="btn btn-primary" {{action "toggleModal"}}>Calculate Score</button>
+   </div>
+   <a href="#" class="go-top">Scroll to Top</a>
+   {{#if isShowingModal}} 
+        {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
+            <div>
+                congratulations..!!
+                <br> Your Score Is <br>
+                <div class="score">
+                    {{score}}/25
+                </div>
+                <br>
+                <button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>
+            </div>
+        {{/modal-dialog}}
+   {{/if}}
+   <div class ="timer" id="divFloatTimer" {{action "init"}}>
+        Time Left : {{dispmin}}:{{seconds}}
+   </div>
 </div>
-        </div>
-        <div class = "logoutP">
-<button type="button" class="btn btn-default btn-sm"{{action "log_out1"}}>
-          <span class="glyphicon glyphicon-log-out"></span> Log out</button>
-        </div>
+<div class = "logoutP">
+   <button type="button" class="btn btn-default btn-sm"{{action "log_out1"}}>
+   <span class="glyphicon glyphicon-log-out"></span> Log out</button>
+</div>

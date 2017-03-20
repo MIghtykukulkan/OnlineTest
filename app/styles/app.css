@@ -1,57 +1,50 @@
-.navbar-nav{
+.navbar-nav {
     padding-bottom: 10px;
     padding-top: 10px;
 }
-
-.navbar-nav li{
-        padding-left: 20px;
+.navbar-nav li {
+    padding-left: 20px;
     padding-right: 17px;
 }
-
 .logo {
     width: 50px;
     background-image: url("images/Rapidqube Logo.jpg");
     background-repeat: repeat-x;
-    background-color: rgb(72,131,175);
+    background-color: rgb(72, 131, 175);
     position: absolute;
     height: 39px;
 }
-.btngroup{
+.btngroup {
     padding-top: 10%;
 }
-
-.portalbackground{
-    
+.portalbackground {
     background-image: url("images/abstract-backgrounds.jpg");
-    background-repeat: repeat-x;
-   
+    background-repeat: repeat;
+    position: fixed;
+    width: 1030px;
 }
-.subcontainer{
+.subcontainer {
     height: 100vh;
-   
 }
-.container{      
+.container {
     background: rgba(122, 130, 136, 0.5)!important;
-    background-repeat: repeat-y;
+    background-repeat: repeat;  
+    width: 1500px;
 }
 .btn-reg {
     position: relative;
     left: 470px;
     top: 70px;
 }
-
 .img-home {
     position: relative;
     top: 80px;
-    
 }
-
 .btn-taketest {
     padding: 6px 12px;
     position: relative;
     left: 10px;
 }
-
 .btn-checkscore {
     background-color: dodgerblue;
     display: inline-block;
@@ -66,17 +59,12 @@
     margin-left: auto;
     text-align: center;
     padding-top: 2%;
-    
 }
-
 .register-box-body {
-  
-     background: rgba(5, 5, 5, 0.2)!important;
+    background: rgba(5, 5, 5, 0.2)!important;
     padding-top: 10px;
     padding-bottom: 5px;
     padding-right: 20px;
-     
-    
 }
 .home-box {
     width: 50%;
@@ -89,37 +77,30 @@
     padding-top: 15%;
 }
 .home-box-body {
-  
-     background: rgba(5, 5, 5, 0.2)!important;
+    background: rgba(5, 5, 5, 0.2)!important;
     padding-top: 10px;
     padding-bottom: 20px;
 }
-
 .btn-calscore {
     position: relative;
     left: 470px;
     padding-bottom: 50px;
 }
-
 .form-group-test {
     text-align: center;
 }
-
 .errmsg {
     color: red;
 }
-
 .align-q {
     position: relative;
     text-align: left;
     left: 80px;
     background-repeat: repeat;
 }
-
 .test-head {
     -webkit-text-fill-color: darkred;
 }
-
 .ember-modal-overlay {
     height: 100vh;
     left: 0;
@@ -128,31 +109,25 @@
     top: 0;
     z-index: 50
 }
-
 .ember-modal-dialog {
     z-index: 50;
     position: fixed
 }
-
 .ember-modal-dialog.ember-modal-dialog-in-place {
     position: relative
 }
-
 .ember-modal-dialog {
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 0 10px #222;
     padding: 10px
 }
-
 .ember-modal-overlay.translucent {
     background-color: rgba(128, 128, 128, .77)
 }
-
 .hljs-comment {
     color: #999
 }
-
 .css .hljs-class,
 .css .hljs-id,
 .css .hljs-pseudo,
@@ -167,7 +142,6 @@
 .xml .hljs-tag .hljs-title {
     color: #f2777a
 }
-
 .hljs-built_in,
 .hljs-constant,
 .hljs-literal,
@@ -177,12 +151,10 @@
 .hljs-preprocessor {
     color: #f99157
 }
-
 .css .hljs-rules .hljs-attribute,
 .ruby .hljs-class .hljs-title {
     color: #fc6
 }
-
 .hljs-header,
 .hljs-inheritance,
 .hljs-string,
@@ -191,12 +163,10 @@
 .xml .hljs-cdata {
     color: #9c9
 }
-
 .css .hljs-hexcolor,
 .hljs-title {
     color: #6cc
 }
-
 .coffeescript .hljs-title,
 .hljs-function,
 .javascript .hljs-title,
@@ -207,12 +177,10 @@
 .ruby .hljs-title .hljs-keyword {
     color: #69c
 }
-
 .hljs-keyword,
 .javascript .hljs-function {
     color: #c9c
 }
-
 .hljs {
     display: block;
     overflow-x: auto;
@@ -221,7 +189,6 @@
     padding: .5em;
     -webkit-text-size-adjust: none
 }
-
 .coffeescript .javascript,
 .javascript .xml,
 .tex .hljs-formula,
@@ -231,12 +198,10 @@
 .xml .vbscript {
     opacity: .5
 }
-
 body {
     font-family: sans-serif;
     font-size: 12px
 }
-
 .example {
     padding: 10px;
     background: #ddd;
@@ -247,46 +212,38 @@ body {
     width: 500px;
     max-width: 93%
 }
-
 #container-in-place {
     min-height: 10px;
     border: 2px dotted #0f0;
     padding: 20px
 }
-
 button {
     padding: 4px 8px;
     border-radius: 4px;
     background-color: #0f9d58;
     color: #fff;
     cursor: pointer;
-    outline: 0
+    
 }
-
 .targetContainer {
     text-align: center
 }
-
 pre {
     border: 1px solid #bbb;
     border-radius: 4px
 }
-
 h1,
 h2 {
     padding: 0 0 8px;
     margin: 0
 }
-
 .my-cool-modal {
     border-radius: 100px;
     padding: 40px
 }
-
 .custom-styles-modal {
     background-color: rgba(15, 157, 88, .77)
 }
-
 .custom-styles-modal-container {
     background: #222;
     color: #fff;
@@ -295,25 +252,20 @@ h2 {
     top: 10px;
     width: 300px
 }
-
 .custom-styles-modal-container h1 {
     color: #0f9d58
 }
-
 .ember-modal-overlay-in-place {
     height: initial;
     opacity: initial;
     position: initial
 }
-
 .ember-modal-dialog-in-place {
     position: initial
 }
-
 body.centered-modal-showing {
     overflow: hidden
 }
-
 .centered-scrolling-wrapper {
     position: fixed;
     z-index: 99;
@@ -323,7 +275,6 @@ body.centered-modal-showing {
     top: 0;
     overflow-y: scroll
 }
-
 .centered-scrolling-overlay {
     display: flex;
     display: -webkit-flex;
@@ -336,12 +287,10 @@ body.centered-modal-showing {
     position: relative;
     height: auto
 }
-
 .centered-scrolling-overlay.translucent {
     background-color: rgba(0, 0, 0, .5);
     opacity: 1
 }
-
 .centered-scrolling-container {
     position: relative;
     background-color: #fff;
@@ -354,73 +303,82 @@ body.centered-modal-showing {
     box-sizing: border-box;
     box-shadow: 0 4px 25px 4px rgba(0, 0, 0, .3)
 }
-
-.testlist{
-    
+.testlist {
     position: relative;
     top: -40px;
     left: 38px;
 }
-.Qbackground{
-     position: relative;
-     
-     
+.Qbackground {
+    position: relative;
 }
-.adj{
-     position: relative;
+.adj {
+    position: relative;
     top: 20px;
     left: -18px;
     font-size: large;
 }
-.Que{
+.Que {
     position: relative;
     top: -20px;
     left: 40px;
 }
-.Qinput-group{
+.Qinput-group {
     position: relative;
-   top: -18px;
-    left: -41px; 
+    top: -18px;
+    left: -41px;
 }
-.Qbtn-taketest{
-   position: relative;
+.Qbtn-taketest {
+    position: relative;
     top: -6px;
-    left: 38px;  
+    left: 38px;
 }
-.logoutT{
-
-   position:absolute;
-   padding-left:880px;
-   bottom: 275px;
-   -webkit-text-fill-color:black;
+.logoutT {
+    position: absolute;
+    padding-left: 880px;
+    bottom: 275px;
+    -webkit-text-fill-color: black;
 }
-.logoutP{
-     position:absolute;
-   padding-left:880px;
- bottom: 275px;
-   -webkit-text-fill-color:black;
+.logoutP {
+    position: absolute;
+    padding-left: 880px;
+    top: -35px;
+    -webkit-text-fill-color: black;
 }
-.login{
-position:fixed;
-   right:10px;
-   top:5px;    
+.login {
+    position: fixed;
+    right: 10px;
+    top: 5px;
 }
-.score{
-      -webkit-text-fill-color: green;
-      text-align: center;
-      font-size: large;
+.score {
+    -webkit-text-fill-color: green;
+    text-align: center;
+    font-size: large;
 }
-.timer{
-   text-align: center;
+.timer {
+    text-align: center;
     padding: 10px;
     position: fixed;
     z-index: 3000000;
     top: 50px;
     right: 1px;
     width: auto;
-    background-color:green;
+    background-color: green;
     color: white;
 }
-.text-color{
+.text-color {
     -webkit-text-fill-color: white;
+}
+.go-top {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+}
+.go-top:hover {
+    background-color: rgba(0, 0, 0, 0.6);
 }

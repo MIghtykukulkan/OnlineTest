@@ -9,7 +9,7 @@ export default Ember.Route.extend({
             console.log("Token Fetched: " + sessionStorage.getItem('token'));
             
             var message = this.controllerFor('home').get('token');
-           console.log('message');
+            console.log('message');
             this.controllerFor('Programming').set('token', message);
 
             var message = this.controllerFor('register').get('uid');
