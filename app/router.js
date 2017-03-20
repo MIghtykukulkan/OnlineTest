@@ -26,6 +26,7 @@ Router.map(function() {
   this.route('test');
   this.route('addquestion');
   this.route('login');
+  this.route('agreement');
 });
 
 export default Router;
