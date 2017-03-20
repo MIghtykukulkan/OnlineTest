@@ -68,7 +68,7 @@ export default Ember.Controller.extend(Validations, {
                          if (usertype=="admin"){
                         mycontroller.transitionToRoute('report');
                         } else {
-                        mycontroller.transitionToRoute('test');
+                        mycontroller.transitionToRoute('agreement');
                         }
 
                     } else {
