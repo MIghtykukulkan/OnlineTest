@@ -16,6 +16,7 @@
 }
 .btngroup {
     padding-top: 10%;
+
 }
 .portalbackground {
     background-image: url("images/abstract-backgrounds.jpg");
@@ -44,6 +45,7 @@
     padding: 6px 12px;
     position: relative;
     left: 10px;
+    font-size: large;
 }
 .btn-checkscore {
     background-color: dodgerblue;
@@ -75,12 +77,13 @@
     margin-left: auto;
     text-align: center;
     padding-top: 15%;
-    font-size:x-large;
+  
 }
 .home-box-body {
     background: rgba(5, 5, 5, 0.2)!important;
     padding-top: 10px;
     padding-bottom: 20px;
+    font-size: larger;
 }
 .btn-calscore {
     position: relative;
@@ -396,4 +399,17 @@ body.centered-modal-showing {
 .navbar-inverse{
 position: absolute;
 width: 100%;
+}
+.text-box{
+    right: 15%;
+}
+.form-group{
+    text-align: left;
+    font-size: large;
+}
+.input-group .form-control {
+    font-size: large;
+}
+.btn-primary{
+    font-size: large;
 }
