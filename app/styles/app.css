@@ -45,7 +45,6 @@
     padding: 6px 12px;
     position: relative;
     left: 10px;
-    font-size: large;
 }
 .btn-checkscore {
     background-color: dodgerblue;
@@ -390,7 +389,8 @@ body.centered-modal-showing {
 }
 .instructions{
     -webkit-text-fill-color: white;
-    text-align: center;
+    text-align:left;
+    font-size: large;
 }
 .submitagreement{
     text-align: center;
@@ -402,14 +402,4 @@ width: 100%;
 }
 .text-box{
     right: 15%;
-}
-.form-group{
-    text-align: left;
-    font-size: large;
-}
-.input-group .form-control {
-    font-size: large;
-}
-.btn-primary{
-    font-size: large;
 }
