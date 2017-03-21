@@ -90,7 +90,8 @@
 }
 .errmsg {
     color: red;
-  
+    position: absolute;
+   top: 30px;
 }
 .align-q {
     position: relative;
