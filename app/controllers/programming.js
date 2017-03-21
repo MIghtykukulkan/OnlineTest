@@ -50,7 +50,7 @@ export default Ember.Controller.extend({
             $.ajax({
                 type: 'POST',
                 accepts: 'application/json',
-                authenticate: 'token',
+                authorization: token,
                 url: CONFIG.GOURL + '/userAnswer',
                 data: JSON.stringify(datalist),
                 success: function(response) {
@@ -83,7 +83,7 @@ export default Ember.Controller.extend({
                 url: CONFIG.GOURL + '/logout',
                 type: 'GET',
                 accepts: 'application/json',
-                authenticate: 'token',
+                authorization: token,
                 success: function(response) {
                     console.log(JSON.stringify(response));
                     //uid = response.message;

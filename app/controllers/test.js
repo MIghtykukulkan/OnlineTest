@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
                 url: CONFIG.GOURL + '/logout',
                 type: 'GET',
                 accepts: 'application/json',
-                authenticate: 'token',
+                authorization: token,
                 success: function(response) {
                     console.log(JSON.stringify(response));
                     //uid = response.message;
