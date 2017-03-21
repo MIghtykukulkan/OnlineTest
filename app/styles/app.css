@@ -20,7 +20,7 @@
 .portalbackground {
     background-image: url("images/abstract-backgrounds.jpg");
     background-repeat: repeat;
-    width: 1030px;
+    width: 1007px;
 }
 .subcontainer {
     height: 100vh;
@@ -336,7 +336,7 @@ body.centered-modal-showing {
 .logoutT {
     position: absolute;
     padding-left: 870px;
-    bottom: 275px;
+     top: -35px;
     -webkit-text-fill-color: black;
 }
 .logoutP {
@@ -346,9 +346,9 @@ body.centered-modal-showing {
     -webkit-text-fill-color: black;
 }
 .login {
-    position: fixed;
-    right: 10px;
-    top: 5px;
+   position: absolute;
+    padding-left: 870px;
+    top: -35px;
 }
 .score {
     -webkit-text-fill-color: green;
