@@ -4,41 +4,6 @@ import CONFIG from 'online-test/config/environment';
 export default Ember.Controller.extend({
     isShowingModal: false,
 
-     seconds : 60,
-     minutes : 1,
-     
-     watchmin : function(){
-         this.set('dispmin', this.get('minutes')-1)
-     }.observes('minutes'),
-
-init: function () { 
-            this.set('dispmin', this.get('minutes')-1)
-            this.updateTimeProperty();
-            },
-updateTimeProperty: function () {
-  
-  Ember.run.later(this, function() {
-      var seconds = this.get('seconds')
-      var minutes = this.get('minutes')
-      seconds--;
-      //console.log(seconds)
-      if(seconds== -1){
-          minutes--;
-          seconds=60;
-      }
-      this.set('seconds',seconds)
-      this.set('minutes',minutes)
-      
-
-      if(minutes==0){         
-          this.send('exitaction')
-      }
-      else{
-        this.updateTimeProperty();
-      }
-    
-  }, 1000);
-},
 
 
 
