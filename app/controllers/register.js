@@ -105,7 +105,7 @@ export default Ember.Controller.extend(Validations, {
                    mycontroller.set('uid',uid);
                    mycontroller.toggleProperty('isShowingModal');
                    mycontroller.set('loading_image_visibility', "hide");
-                   mycontroller.transitionToRoute('test');              
+                   mycontroller.transitionToRoute('home');              
                   
             },
             error: function(result) {
