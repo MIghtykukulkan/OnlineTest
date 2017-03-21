@@ -9,98 +9,98 @@ export default Ember.Controller.extend({
 
     actions: {
 
-        exitaction: function(){
-            
+        exitaction: function() {
+
             this.toggleProperty('isShowingModal');
         },
-         
+
         toggleModal: function() {
             this.toggleProperty('isShowingModal');
-          
+
             console.log("toggled");
 
             console.log(JSON.stringify(dataStringsc));
-           
-           console.log('uid');
 
-           // this.toggleProperty('isShowingModal');
-          
+            console.log('uid');
+
+            // this.toggleProperty('isShowingModal');
+
             var message = this.get('uid');
             var q_type = this.get('q_type');
             var score = this.get('score');
-        
+
             var model = this.get('model');
             model = model.message;
             var datalist = [];
-            for(var i=0; i< model.length; i++){
+            for (var i = 0; i < model.length; i++) {
 
-          var dataStringsc ={
+                var dataStringsc = {
                     "uid": message,
                     "q_type": model[i].id,
-                    "selected": model[i].userAnswer   
+                    "selected": model[i].userAnswer
                 }
 
-        
+
                 datalist[i] = dataStringsc;
-             
+
             }
 
             var mycontroller = this;
-              console.log(JSON.stringify(datalist))
-                $.ajax({
-                    type: 'POST',
-                    accepts: 'application/json',
-                    authenticate: 'token',
-                    url: CONFIG.GOURL+'/userAnswer',
-                    data: JSON.stringify(datalist),
-                    success: function(response) {
-                        mycontroller.set("score",response.score)
-                        console.log(response)
-                    },
-                    error: function(result) {
-                         console.log(result)
-                    },
-                    
-                })
-                
+            console.log(JSON.stringify(datalist))
+            $.ajax({
+                type: 'POST',
+                accepts: 'application/json',
+                authenticate: 'token',
+                url: CONFIG.GOURL + '/userAnswer',
+                data: JSON.stringify(datalist),
+                success: function(response) {
+                    mycontroller.set("score", response.score)
+                    console.log(response)
+                },
+                error: function(result) {
+                    console.log(result)
+                },
+
+            })
+
 
         },
-        toggleModalOk:function(){
+        toggleModalOk: function() {
             this.transitionToRoute('home');
         },
-        toggleModalNext:function(){
+        toggleModalNext: function() {
             this.transitionToRoute('test');
         },
-    
-     log_out1 : function() {
-    
+
+        log_out1: function() {
+
             console.log(CONFIG.GOURL);
-           // this.toggleProperty('isShowingModal');
-           // this.set('loading_image_visibility', "show");
+            // this.toggleProperty('isShowingModal');
+            // this.set('loading_image_visibility', "show");
             var mycontroller = this;
-           // var uid;
+            // var uid;
             return $.ajax({
-            url: CONFIG.GOURL + '/logout',
-            type: 'GET',
-            accepts: 'application/json',
-            authenticate: 'token',
-            success: function(response) {
-                   console.log(JSON.stringify(response));
-                   //uid = response.message;
-                  // mycontroller.set('uid',uid);
-                   sessionStorage.setItem('token', null);
-                   mycontroller.transitionToRoute('home');              
-                  
-            },
-            error: function(result) {
-                   console.log('DEBUG: GET Enquiries Failed');
-            }
-           });
+                url: CONFIG.GOURL + '/logout',
+                type: 'GET',
+                accepts: 'application/json',
+                authenticate: 'token',
+                success: function(response) {
+                    console.log(JSON.stringify(response));
+                    //uid = response.message;
+                    // mycontroller.set('uid',uid);
+                    sessionStorage.setItem('token', null);
+                    mycontroller.transitionToRoute('home');
+
+                },
+                error: function(result) {
+                    console.log('DEBUG: GET Enquiries Failed');
+                }
+            });
         },
-       
+
     },
-   
-        /*scoreCalculation : function() {
+
+    /*scoreCalculation : function() {
 
             var lastName = this.get('lname');
             var firstName = this.get('fname');
@@ -171,4 +171,3 @@ export default Ember.Controller.extend({
                 }*/
 
 });
-  

@@ -50,25 +50,25 @@ export default Ember.Controller.extend(Validations, {
                 success: function(response) {
                     var message = response.message;
                     var status = response.status;
-                    if (status == "success"  ) {
+                    if (status == "success") {
                         console.log(JSON.stringify(response));
                         uid = message.uid;
                         fname = message.fname;
                         token = message.token;
                         usertype = message.usertype;
-                        
+
                         sessionStorage.setItem('token', token);
-                        
+
                         mycontroller.set('uid', uid);
                         mycontroller.set('fname', fname);
                         mycontroller.set('token', token);
                         mycontroller.set('usertype', usertype);
                         mycontroller.toggleProperty('isShowingModal');
                         mycontroller.set('loading_image_visibility', "hide");
-                         if (usertype=="admin"){
-                        mycontroller.transitionToRoute('report');
+                        if (usertype == "admin") {
+                            mycontroller.transitionToRoute('report');
                         } else {
-                        mycontroller.transitionToRoute('agreement');
+                            mycontroller.transitionToRoute('agreement');
                         }
 
                     } else {
@@ -76,9 +76,7 @@ export default Ember.Controller.extend(Validations, {
                         mycontroller.set('errormessage', "Invalid Credentials");
                     }
 
-                    
-                    
-                   
+
 
 
                 },

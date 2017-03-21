@@ -27,24 +27,24 @@ export default Ember.Controller.extend({
             this.set('loading_image_visibility', "show");
             var mycontroller = this;
             var uid;
-           return $.ajax({
-            url: CONFIG.GOURL+'/',
-            type: 'POST',
-            accepts: 'application/json',
-            data: JSON.stringify(dataString),
-            success: function(response) {
-                   console.log(JSON.stringify(response));
-                   uid = response.message;
-                   mycontroller.set('uid',uid);
-                   mycontroller.toggleProperty('isShowingModal');
-                   //mycontroller.set('loading_image_visibility', "hide");
-                   mycontroller.transitionToRoute('test');              
-                  
-            },
-            error: function(result) {
-                   console.log('DEBUG: GET Enquiries Failed');
-            }
-           });
+            return $.ajax({
+                url: CONFIG.GOURL + '/',
+                type: 'POST',
+                accepts: 'application/json',
+                data: JSON.stringify(dataString),
+                success: function(response) {
+                    console.log(JSON.stringify(response));
+                    uid = response.message;
+                    mycontroller.set('uid', uid);
+                    mycontroller.toggleProperty('isShowingModal');
+                    //mycontroller.set('loading_image_visibility', "hide");
+                    mycontroller.transitionToRoute('test');
+
+                },
+                error: function(result) {
+                    console.log('DEBUG: GET Enquiries Failed');
+                }
+            });
         }
     }
 });

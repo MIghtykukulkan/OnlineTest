@@ -1,9 +1,6 @@
 <label>{{Ques.question}}</label>
 
 {{#each Ques.choices as |item|}}
-        <br> {{#radio-button radioClass = "radioClass" value = item name = Ques.id groupValue=Ques.userAnswer}} {{item}} {{/radio-button}}
-{{/each}}
+<br> {{#radio-button radioClass = "radioClass" value = item name = Ques.id groupValue=Ques.userAnswer}} {{item}} {{/radio-button}} {{/each}}
 
-<br>
-
-selected value is : {{Ques.userAnswer}}
+<br> selected value is : {{Ques.userAnswer}}
