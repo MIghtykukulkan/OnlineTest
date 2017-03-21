@@ -383,3 +383,11 @@ body.centered-modal-showing {
 .go-top:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
+.instructions{
+    -webkit-text-fill-color: white;
+    text-align: center;
+}
+.submitagreement{
+    text-align: center;
+    -webkit-text-fill-color:black;
+}
