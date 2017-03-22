@@ -47,10 +47,12 @@ export default Ember.Controller.extend({
 
             var mycontroller = this;
             console.log(JSON.stringify(datalist))
+            console.log(token);
+            var token = sessionStorage.getItem('token');
             $.ajax({
                 type: 'POST',
                 accepts: 'application/json',
-                authorization: token,
+                Authorization: token,
                 url: CONFIG.GOURL + '/userAnswer',
                 data: JSON.stringify(datalist),
                 success: function(response) {
@@ -78,12 +80,13 @@ export default Ember.Controller.extend({
             // this.toggleProperty('isShowingModal');
             // this.set('loading_image_visibility', "show");
             var mycontroller = this;
+            
             // var uid;
             return $.ajax({
                 url: CONFIG.GOURL + '/logout',
                 type: 'GET',
                 accepts: 'application/json',
-                authorization: token,
+                Authorization: token,
                 success: function(response) {
                     console.log(JSON.stringify(response));
                     //uid = response.message;

@@ -350,9 +350,10 @@ body.centered-modal-showing {
     -webkit-text-fill-color: black;
 }
 .login {
-   position: absolute;
-    padding-left: 870px;
-    top: -35px;
+   
+    padding-left: 890px;
+    position: absolute;
+    top:3px;
 }
 .score {
     -webkit-text-fill-color: green;
@@ -387,10 +388,9 @@ body.centered-modal-showing {
 .go-top:hover {
     background-color: rgba(0, 0, 0, 0.6);
 }
-.instructions{
+.Instructions{
     -webkit-text-fill-color: white;
     text-align:left;
-    font-size: large;
 }
 .submitagreement{
     text-align: center;
@@ -402,4 +402,7 @@ width: 100%;
 }
 .text-box{
     right: 15%;
+}
+.agreementNoClr{
+    color: white;
 }
