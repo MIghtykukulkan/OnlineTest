@@ -52,7 +52,7 @@ export default Ember.Controller.extend({
             $.ajax({
                 type: 'POST',
                 accepts: 'application/json',
-                Authorization: 'token',
+                Authorization: token,
                 url: CONFIG.GOURL + '/userAnswer',
                 data: JSON.stringify(datalist),
                 success: function(response) {

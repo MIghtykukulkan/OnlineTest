@@ -23,7 +23,7 @@ export default Ember.Route.extend({
             console.log(testtype);
             testtype = testtype.toLowerCase()
             this.set('selectedtest',testtype);
-
+ 
            var data;
            var token = sessionStorage.getItem('token');
            console.log(token);
@@ -32,11 +32,12 @@ export default Ember.Route.extend({
                     type: 'GET',
                     accepts: 'application/json',
                     Authorization: token,
+                    
                     success: function(data) {
                         //alert("success"+JSON.stringify(data))
-                        console.log(JSON.stringify(data))                     
+                        console.log(JSON.stringify(data)) 
+                       
                         return data,
-                        
                         console.log('DEBUG: GET Enquiries OK');
                     },
                     error: function(err) {

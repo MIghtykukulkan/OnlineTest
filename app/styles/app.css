@@ -401,6 +401,7 @@ body.centered-modal-showing {
     color: white;
 }
 .text-color-title{
-     font-family: 'Gloria Hallelujah', cursive;
-    -webkit-text-fill-color: darkorange;
+    font-family:  'Clicker Script', cursive;
+    -webkit-text-fill-color: white;
+     font-weight: 900;
 }
