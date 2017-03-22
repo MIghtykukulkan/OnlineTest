@@ -82,6 +82,7 @@ export default Ember.Controller.extend({
             var mycontroller = this;
             
             // var uid;
+             var token = sessionStorage.getItem('token');
             return $.ajax({
                 url: CONFIG.GOURL + '/logout',
                 type: 'GET',

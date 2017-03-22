@@ -20,6 +20,7 @@ export default Ember.Controller.extend({
             this.set('loading_image_visibility', "show");
             var mycontroller = this;
             // var uid;
+             var token = sessionStorage.getItem('token');
             return $.ajax({
                 url: CONFIG.GOURL + '/logout',
                 type: 'GET',
