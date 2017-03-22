@@ -400,3 +400,7 @@ body.centered-modal-showing {
 .agreementNoClr {
     color: white;
 }
+.text-color-title{
+     font-family: 'Gloria Hallelujah', cursive;
+    -webkit-text-fill-color: darkorange;
+}
