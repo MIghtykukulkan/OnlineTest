@@ -32,7 +32,7 @@ module.exports = function(environment) {
 
        //ENV.GOURL='http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8081';
      ENV.GOURL= 'https://rpqb-onlinetest-rest.herokuapp.com'
-      // ENV.GOURL='http://localhost:8085';
+       //ENV.GOURL='http://localhost:8085';
 
   }
 
