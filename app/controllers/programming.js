@@ -73,6 +73,7 @@ export default Ember.Controller.extend({
         },*/
         toggleModalNext: function() {
             this.transitionToRoute('test');
+           // transition.refresh();
         },
 
         log_out1: function() {
