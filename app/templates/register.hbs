@@ -87,11 +87,21 @@
                     <br>
                 </div>
 
-
                 <div class="btn-taketest">
                     <button type="button" class="btn btn-primary" {{action 'registerUser'}}> Submit </button>
                 </div>
-
+               
+    {{#if showRegResponse}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
+    <div>
+        <br>
+        <div class="message">
+            {{message}}
+        </div>
+        <br>
+        <button type="button" class="btn btn-success" {{action "regOK"}}>OK</button>
+    </div>
+    {{/modal-dialog}} 
+    {{/if}}
 
             </div>
         </div>

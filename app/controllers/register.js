@@ -67,6 +67,7 @@ var Validations = buildValidations({
 
 export default Ember.Controller.extend(Validations, {
     isShowingModal: false,
+    showRegResponse: false,
     actions: {
         login1:function(){
             sessionStorage.setItem('token', "TEST");
@@ -90,11 +91,12 @@ export default Ember.Controller.extend(Validations, {
                 "password":password,
             };
             console.log(CONFIG.GOURL);
-            alert('YOU ARE SUCCESSFULLY REGISTERED');
+            //alert('YOU ARE SUCCESSFULLY REGISTERED');
             this.toggleProperty('isShowingModal');
             this.set('loading_image_visibility', "show");
             var mycontroller = this;
             var uid;
+            var message;
             return $.ajax({
             url: CONFIG.GOURL+'/registerUser',
             type: 'POST',
@@ -102,17 +104,26 @@ export default Ember.Controller.extend(Validations, {
             data: JSON.stringify(dataString),
             success: function(response) {
                    console.log(JSON.stringify(response));
-                   uid = response.message;
+                   message=response.message.message;
+                     console.log(response.message);
                    mycontroller.set('uid',uid);
+                   mycontroller.set('message',message);
+                   mycontroller.toggleProperty('showRegResponse');
                    mycontroller.toggleProperty('isShowingModal');
                    mycontroller.set('loading_image_visibility', "hide");
-                   mycontroller.transitionToRoute('home');              
+                 //  mycontroller.transitionToRoute('home');              
                   
             },
             error: function(result) {
                    console.log('DEBUG: GET Enquiries Failed');
             }
            });
+        },
+
+        regOK: function() {
+             var mycontroller = this;
+            mycontroller.toggleProperty('showRegResponse');
+            mycontroller.transitionToRoute('home');
         }
     }
 });
