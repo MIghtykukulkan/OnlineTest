@@ -12,6 +12,10 @@ columns: [
     "title": "Fname"
   },
   {
+    "propertyName": "lname",
+    "title": "Lname"
+  },
+  {
     "propertyName": "java",
     "title": "Java"
   },
@@ -24,32 +28,53 @@ columns: [
     "title": "Language"
   },
   
-]
- 
+],
+
 /*actions: {
 
   reportCard : function() {
-    var data;
-   return $.ajax({
-                    url: CONFIG.GOURL+'/report',
+
+           let {
+                 uid,
+                fname,
+                lname,
+                java,
+                fundamental,
+                language
+            } = this.getProperties('uid','fname', 'lname', 'java', 'fundamental','language');
+
+      
+
+           var dataStringq = [{"uid":uid,
+                  "fname":fname, 
+                  "lname":lname,
+                  "java":java,
+                  "fundamental":fundamental,
+                  "language":language,
+                  }]
+
+      
+           
+   /*return $.ajax({
+                    url: CONFIG.GOURL+'/mockadmin',
                     type: 'GET',
                     accepts: 'application/json',
-                    success: function(data) {
+                    data: JSON.stringify(dataStringq),
+                    success: function(dataStringq) {
                         //alert("success"+JSON.stringify(data))
-                        console.log(JSON.stringify(data))                     
-                        return data,
-                        
+                        console.log(JSON.stringify(dataStringq))                     
+                        return dataStringq,
                         console.log('DEBUG: GET Enquiries OK');
+                          
                     },
                     error: function(err) {
-                        console.log(data)
+                        console.log(dataStringq)
                         alert(err)
                         console.log('DEBUG: GET Enquiries Failed');
                     }
                 });
-               
-            }
-            }); */
-
+  }    
+            
+}*/
 
 });

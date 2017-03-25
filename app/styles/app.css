@@ -80,6 +80,22 @@
     padding-bottom: 20px;
     font-size: larger;
 }
+.addQ-box {
+    width: 50%;
+    height: 100%;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    text-align: center;
+    padding-top: 15%;
+}
+.addQ-box-body {
+    background: rgba(5, 5, 5, 0.2)!important;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: larger;
+}
 .btn-calscore {
     position: relative;
     left: 470px;
@@ -404,3 +420,5 @@ body.centered-modal-showing {
     font-family:  'Clicker Script', cursive;
     -webkit-text-fill-color: white;
 }
+
+    
