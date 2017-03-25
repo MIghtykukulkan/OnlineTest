@@ -8,21 +8,21 @@ import {
 } from 'ember-cp-validations';
 
 var Validations = buildValidations({
-    firstname: [
+    fname: [
         validator('presence', true),
         validator('format', {
             regex: /^[A-Za-z]+$/
         })
     ],
 
-    lastname: [
+    lname: [
         validator('presence', true),
         validator('format', {
             regex: /^[A-Za-z]+$/
         })
     ],
 
-    phonenumber: [
+    phone: [
         validator('presence', true),
         validator('format', {
             type: 'phone',

@@ -67,9 +67,9 @@ export default Ember.Controller.extend({
 
 
         },
-        toggleModalOk: function() {
+       /* toggleModalOk: function() {
             this.transitionToRoute('home');
-        },
+        },*/
         toggleModalNext: function() {
             this.transitionToRoute('test');
         },

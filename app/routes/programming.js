@@ -28,7 +28,7 @@ export default Ember.Route.extend({
            var token = sessionStorage.getItem('token');
            console.log(token);
            return $.ajax({
-                    url: CONFIG.GOURL+'/questions?testtype='+testtype,
+                    url: CONFIG.GOURL+'/questions?testtype='+testtype+'&Authorization='+token,
                     type: 'GET',
                     accepts: 'application/json',
                     Authorization: token,
