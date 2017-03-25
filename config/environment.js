@@ -30,8 +30,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true
 
-       //ENV.GOURL='http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8081';
-     ENV.GOURL= 'https://rpqb-onlinetest-rest.herokuapp.com'
+      ENV.GOURL='http://ec2-54-218-55-72.us-west-2.compute.amazonaws.com:8086';
+     //ENV.GOURL= 'https://rpqb-onlinetest-rest.herokuapp.com'
        //ENV.GOURL='http://localhost:8085';
 
   // ENV.GOURL= 'http://localhost:8086';

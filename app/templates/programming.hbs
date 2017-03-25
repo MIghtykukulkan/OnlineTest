@@ -18,7 +18,8 @@
         })
     });
 </script>
-
+<br>
+<br>
 <div class="text-color">
     <div class="align-q">
         <div class="test-head">
@@ -31,20 +32,24 @@
     <div class="btn-calscore">
         <button type="button" class="btn btn-primary" {{action "toggleModal"}}>Calculate Score</button>
     </div>
-    <a href="#" class="go-top">Scroll to Top</a> {{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
+    <a href="#" class="go-top">Scroll to Top</a> 
+    {{#if isShowingModal}} {{#modal-dialog targetAttachment="center" translucentOverlay=true}}
     <div>
         congratulations..!!
         <br> Your Score Is
         <br>
         <div class="score">
-            {{score}}/25
+            {{score}}
         </div>
         <br>
-        <button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>
-        <button type="button" class="btn btn-success" {{action "toggleModalNext"}}>Next</button>
-
     </div>
-    {{/modal-dialog}} {{/if}} {{timer-component action="exitaction"}}
+<!--<button type="button" class="btn btn-success" {{action "toggleModalOk"}}>OK</button>-->
+        <button type="button" class="btn btn-success" {{action "toggleModalNext"}}>Next Test</button>
+    {{/modal-dialog}} 
+    {{/if}}
+    {{#if showTimer}}
+    {{timer-component action="exitaction"}}
+      {{/if}}
 </div>
 <div class="logoutP">
     <button type="button" class="btn btn-default btn-sm" {{action "log_out1"}}>

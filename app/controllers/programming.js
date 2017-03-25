@@ -3,18 +3,19 @@ import CONFIG from 'online-test/config/environment';
 
 export default Ember.Controller.extend({
     isShowingModal: false,
-
-
+    showTimer: true,
 
 
     actions: {
 
         exitaction: function() {
-
-            this.toggleProperty('isShowingModal');
+                // this.toggleProperty('showTimer');
+            //this.toggleProperty('isShowingModal');
+            this.send('toggleModal');
         },
 
         toggleModal: function() {
+            this.toggleProperty('showTimer');
             this.toggleProperty('isShowingModal');
 
             console.log("toggled");
