@@ -19,7 +19,7 @@ export default Ember.Route.extend({
             var testtype = this.controllerFor('test').get('selectedtest');
             this.controllerFor('programming').set('testType', testtype);
             this.controllerFor('test').set('selectedtest', null);
-            
+
             console.log(testtype);
             testtype = testtype.toLowerCase()
             this.set('selectedtest',testtype);
